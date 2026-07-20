@@ -90,12 +90,6 @@ body {
     width: 4rem;
 }
 
-.dashboard {
-    visibility: none;
-    opacity: 0;
-    display: none;
-}
-
 .add-expense-main {
     height: 100vmin;
     width: 100%;
@@ -153,12 +147,13 @@ body {
             min-width: 100px;
             max-width: 300px;
             text-align: center;
-            color: rgb(107, 106, 106);
+            color: #a0a0a0;
             outline: none;
         }
 
         input[type="number"]::placeholder {
             text-align: center;
+            color: #a0a0a0;
         }
 
         input::-webkit-outer-spin-button,
@@ -173,8 +168,9 @@ body {
         margin-top: 24px;
 
         p {
-            color: rgb(66, 66, 66);
+            color: #1f1f1f;
             font-weight: 500;
+            margin-left: 4px;
         }
         
         .grid-cato {
@@ -194,21 +190,128 @@ body {
                 flex-direction: column;
 
                 i {
-                    font-size: 20px;
-                    color: black;
+                    font-size: 24px;
+                    color: #6d6d6d;
                 }
+
+                p {
+                    font-size: 16px;
+                    color: #6d6d6d;
+                }
+
             }
 
             .buttons:hover {
-                transform: scale(1.07);
-                transition: 0.3s
-                background-color: ;
-            }
+                background-color: #f0fdf4;
+                color: #006e2f;
+                transform: translateY(-1px);
 
-            .buttons.active {
-                background-color: #22c55e;
-                color: #ffffff;
+                i, 
+                p {
+                    color: #006e2f;
+                }
             }
         }
     }
+
+    .date-method-input {
+        margin-top: 24px;
+        flex-direction: row;
+        gap: 12px;
+
+        .fix-copy-val {
+            flex-direction: column;
+            gap: 12px;
+            width: 50%;
+
+            label {
+                margin-left: 4px;
+                font-size: 12px;
+                color: #3b3b3b;
+            }
+
+            .date-value-icon,
+            .payment-type-icon {
+                background-color: #fff;
+                border-radius: 12px;
+
+                i {
+                    padding: 12px;
+                    color: #6d6d6d;
+                }
+            }
+        }
+        
+        .insel {
+            padding: 16px 16px 16px 0px;
+            outline: none;
+            border: none;
+            box-sizing: border-box;
+            border-radius: 12px;
+            color: #6d6d6d;
+        }
+    }
+
+    .expense-description {
+        margin-top: 24px;
+        flex-direction: column;
+        gap: 12px;
+
+        label {
+            font-size: 12px;
+            margin-left: 4px;
+            color: #3b3b3b;
+        }
+
+        textarea {
+            border: none;
+            outline: none;
+            border-radius: 12px;
+            min-height: 60px;
+            padding: 12px 16px;
+        }
+    }
+}
+
+.save-cancel {
+    padding: 32px;
+    justify-content: end;
+    gap: 12px;
+
+    .commonBtn {
+        border: none;
+        outline: none;
+        border-radius: 12px;
+    }
+    
+    .commonBtn:hover {
+        transform: scale(1.03);
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .add {
+        background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%);
+        box-shadow: 0 10px 15px -3px rgba(34, 197, 94, 0.2);
+        font-size: 16px;
+        padding: 12px 36px;
+        color: #fff;
+        font-weight: 600;
+    }
+
+    .cancel {
+        padding: 12px 24px;
+        background-color: transparent;
+        font-size: 14px;
+    }
+}
+
+.able {
+    visibility: visible;
+    opacity: 1;
+}
+
+.disable {
+    visibility: none;
+    opacity: 0;
 }

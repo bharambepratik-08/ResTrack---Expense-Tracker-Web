@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-    <header class="dashboard">
+    <header class="navBar-header">
         <div class="navBar display align-items">
             <div class="left-side display">
                 <span class="app-name">FinTrack</span>
@@ -34,7 +34,7 @@
         </div>
     </main>
     <main class="add-expense-main display align-items justify-items">
-        <div class="add-expense-page display justify-items">
+        <div class="disable add-expense-page display justify-items">
             <div class="upper-add-expense display">
                 <div class="add-expense-text font">
                     <h1>New Expense</h1>
@@ -57,38 +57,73 @@
                             <i class="fa-solid fa-utensils"></i>
                             <p>Dining</p>
                         </button>
-                        <button class="buttons dining display align-items justify-items">
-                            <i class="fa-solid fa-utensils"></i>
-                            <p>Dining</p>
+                        <button class="buttons shopping display align-items justify-items">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <p>Shopping</p>
                         </button>
-                        <button class="buttons dining display align-items justify-items">
-                            <i class="fa-solid fa-utensils"></i>
-                            <p>Dining</p>
+                        <button class="buttons transport display align-items justify-items">
+                            <i class="fa-solid fa-car"></i>
+                            <p>Transport</p>
                         </button>
-                        <button class="buttons dining display align-items justify-items">
-                            <i class="fa-solid fa-utensils"></i>
-                            <p>Dining</p>
+                        <button class="buttons bills display align-items justify-items">
+                            <i class="fa-solid fa-receipt"></i>
+                            <p>Biils</p>
                         </button>
-                        <button class="buttons dining display align-items justify-items">
-                            <i class="fa-solid fa-utensils"></i>
-                            <p>Dining</p>
+                        <button class="buttons health display align-items justify-items">
+                            <i class="fa-solid fa-stethoscope"></i>
+                            <p>Health</p>
                         </button>
-                        <button class="buttons dining display align-items justify-items">
-                            <i class="fa-solid fa-utensils"></i>
-                            <p>Dining</p>
+                        <button class="buttons leisure display align-items justify-items">
+                            <i class="fa-solid fa-masks-theater"></i>
+                            <p>Leisure</p>
                         </button>
-                        <button class="buttons dining display align-items justify-items">
-                            <i class="fa-solid fa-utensils"></i>
-                            <p>Dining</p>
+                        <button class="buttons housing display align-items justify-items">
+                            <i class="fa-solid fa-home"></i>
+                            <p>Housing</p>
                         </button>
-                        <button class="buttons dining display align-items justify-items">
-                            <i class="fa-solid fa-utensils"></i>
-                            <p>Dining</p>
+                        <button class="buttons other display align-items justify-items">
+                            <i class="fa-solid fa-ellipsis"></i>
+                            <p>Other</p>
                         </button>
                     </div>
                 </div>
+                <div class="date-method-input display align-items font">
+                    <div class="date-input fix-copy-val display">
+                        <label for="date-value">Select Date</label>
+                        <div class="date-value-icon">
+                            <i class="fa-solid fa-calendar"></i>
+                            <input type="date" name="" id="date-value" class="date-value insel">
+                        </div>
+                    </div>
+                    <div class="payment-type-input fix-copy-val display">
+                        <label for="payment-type-value">Select Payment Method</label>
+                        <div class="payment-type-icon">
+                            <i class="fa-solid fa-money-bill"></i>
+                            <select name="payment-type" id="payment-type" class="insel">
+                                <option value="defaultmethod">Select Payment Method</option>
+                                <option value="applepay">Apple Pay</option>
+                                <option value="gpay">Google Pay</option>
+                                <option value="samsungpay">Samsung Pay</option>
+                                <option value="amazonpay">Amazon Pay</option>
+                                <option value="debitcard">Debit Card</option>
+                                <option value="creditcard">Credit Card</option>
+                                <option value="cash">Cash</option>
+                                <option value="cheque">Cheque</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="expense-description font display">
+                    <label for="textarea">Note (optional)</label>
+                    <textarea name="expense-description" id="expense-description" placeholder="What was this for?"></textarea>
+                </div>
             </form>
+            <div class="save-cancel font display align-items">
+                <button class="cancel commonBtn">Cancel</button>
+                <button class="add commonBtn">Save Expense</button>
+            </div>
         </div>
     </main>
+    <script src="JS/script.js"></script>
 </body>
 </html>
