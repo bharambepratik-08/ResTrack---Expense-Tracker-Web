@@ -8,10 +8,6 @@
     font-family: 'Inter', sans-serif;
 }
 
-body {
-    background-color: rgb(247 249 251 / 0.8);
-}
-
 .display {
     display: flex;
 }
@@ -25,7 +21,8 @@ body {
 }
 
 .navBar {
-    position: fixed;
+    position: sticky;
+    z-index: 1000;
     height: 4rem;
     background: rgba(247 249 251 / 0.8); 
     backdrop-filter: blur(12px); 
@@ -67,16 +64,49 @@ body {
 }
 
 .add-expense:hover {
-    color: #fff;
-    transform: scale(1.1);
+    height: 100px;
+    width: 200px;
+    border-radius: 16px;
     transition: 0.3s;
-    cursor: pointer;
+
+    i {
+        display: none;
+    }
 }
 
-.add-expense:active {
-    transform: scale(0.9);
-    transition: 0.1s;
+.common-plus-ae {
+
+    button {
+        background-color: transparent;
+        text-align: center;
+        outline: none;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
 }
+
+.extras {
+    position: fixed;
+    display: none;
+    bottom: 2rem;
+    right: 2rem;
+    height: 100px;
+    width: 200px;
+    padding: auto;
+    gap: 14px;
+}
+
+.add-expense:hover .extras {
+    display: flex;
+    flex-direction: column;
+}
+
 
 .add-expense {
     color: #fff;
@@ -90,13 +120,13 @@ body {
     width: 4rem;
 }
 
-.add-expense-main {
+.add-expense-incomemain {
     height: 100vmin;
     width: 100%;
     background-color: rgb(25 28 30 / 0.2);
 }
 
-.add-expense-page {
+.add-expense-income-page {
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(12px);
     min-width: 600px;
@@ -104,7 +134,7 @@ body {
     flex-direction: column;
 }
 
-.upper-add-expense {
+.upper-add-expense-income {
     padding: 32px 32px 16px;
     justify-content: space-between;
 
@@ -125,14 +155,14 @@ body {
     }
 }
 
-.add-expense-text  {
+.add-expense-income-text  {
     p {
         color: rgb(82, 83, 83);
         font-weight: 500;
     }
 }
 
-.expense-form {
+.expense-income-form {
     padding: 1rem 2rem;
 
     .expense-value-input {
@@ -164,6 +194,32 @@ body {
 
     }
 
+    .expense-merchant-input {
+
+        margin-top: 24px;
+        flex-direction: column;
+        gap: 8px;
+
+        #merchant-expense {
+            padding: 12px;
+            font-size: 12px;
+            font-weight: 500;
+            border: none;
+            background-color: #fff;
+            min-width: 100px;
+            max-width: 50%;
+            color: #202020;
+            outline: none;
+            border-radius: 12px;
+            height: 20px;
+        }
+
+        label {
+            margin-left: 4px;
+            font-size: 16px;
+        }
+    }
+
     .cato-selection {
         margin-top: 24px;
 
@@ -174,11 +230,6 @@ body {
         }
         
         .grid-cato {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            margin-top: 0.5rem;
-            gap: 0.8rem;
 
             .buttons {
                 outline: none;
@@ -211,6 +262,22 @@ body {
                     color: #006e2f;
                 }
             }
+        }
+
+        .cato-e {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            margin-top: 0.5rem;
+            gap: 0.8rem;
+        }
+
+        .cato-i {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            margin-top: 0.5rem;
+            gap: 0.8rem;
         }
     }
 
@@ -289,29 +356,32 @@ body {
         transition: 0.3s;
         cursor: pointer;
     }
+}
 
-    .add {
-        background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%);
-        box-shadow: 0 10px 15px -3px rgba(34, 197, 94, 0.2);
-        font-size: 16px;
-        padding: 12px 36px;
-        color: #fff;
-        font-weight: 600;
-    }
+.cancelie {
+    background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%);
+    box-shadow: 0 10px 15px -3px rgba(34, 197, 94, 0.2);
+    font-size: 16px;
+    padding: 12px 36px;
+    color: #fff;
+    font-weight: 600;
+}
 
-    .cancel {
-        padding: 12px 24px;
-        background-color: transparent;
-        font-size: 14px;
-    }
+.cancelie {
+    padding: 12px 24px;
+    background-color: transparent;
+    font-size: 14px;
+}
+
+.disable {
+    display: none;
+    visibility: none;
+    opacity: 0;
 }
 
 .able {
+    display: flex;
     visibility: visible;
     opacity: 1;
 }
 
-.disable {
-    visibility: none;
-    opacity: 0;
-}

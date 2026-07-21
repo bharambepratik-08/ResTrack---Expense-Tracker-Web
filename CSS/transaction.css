@@ -1,0 +1,31 @@
+.transaction {
+    padding: 2rem;
+    flex-direction: column;
+    gap: 2rem;
+
+    .transaction-head{
+        flex-direction: column;
+
+        p {
+            color: #6d6d6d;
+        }
+    }
+
+    .transaction-info {
+        border-radius: 16px;
+        border: 1px rgba(3, 100, 0, 0.253) solid;
+        max-width: 800px;
+
+        .upper-transaction {
+
+            justify-content: space-evenly;
+
+            h2 {
+                font-size: 16px;
+                color: #6d6d6d;
+                font-weight: 600;
+                padding: 16px 24px;
+            }
+        }
+    }
+}

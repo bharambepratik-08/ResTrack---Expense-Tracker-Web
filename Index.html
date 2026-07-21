@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinTrack</title>
-    <link rel="stylesheet" href="CSS/dashboard.css">
+    <link rel="stylesheet" href="CSS/default.css">
+    <link rel="stylesheet" href="CSS/transaction.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -16,7 +17,7 @@
             <div class="left-side display">
                 <span class="app-name">FinTrack</span>
                 <div class="acess-others display">
-                    <a href="#" class="navBar-text dashboard">Dashboard</a>
+                    <a href="#" class="navBar-text Dashboard">Dashboard</a>
                     <a href="#" class="navBar-text Transition">Transactions</a>
                     <a href="#" class="navBar-text Analytics">Analytics</a>
                     <a href="#" class="navBar-text Budgets">Budgets</a>
@@ -28,31 +29,43 @@
             </div>
         </div>
     </header>
-    <main class="dashboard">
+    <main class="add-button">
         <div class="add-expense display align-items justify-items">
             <i class="fa-regular fa-plus"></i>
+            <div class="extras display align-items justify-items">
+                <div class="add-expense-to common-plus-ae display align-items justify-items font">
+                    <button>Add Expense</button>
+                </div>
+                <div class="add-income common-plus-ae display align-items justify-items">
+                    <button>Add Income</button>
+                </div>
+            </div>
         </div>
     </main>
-    <main class="add-expense-main display align-items justify-items">
-        <div class="disable add-expense-page display justify-items">
-            <div class="upper-add-expense display">
-                <div class="add-expense-text font">
+    <main class="add-expense-main add-expense-incomemain disable display align-items justify-items">
+        <div class="add-expense-page add-expense-income-page display justify-items">
+            <div class="upper-add-expense-income display">
+                <div class="add-expense-income-text font">
                     <h1>New Expense</h1>
                     <p>Log your transaction to keep track of your budget.</p>
                 </div>
                 <div class="close-expense">
-                    <button>
+                    <button class="class-cancel">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
                 </div>
             </div>
-            <form class="expense-form">
+            <form class="expense-form expense-income-form">
                 <div class="expense-value-input display align-items justify-items">
                     <input type="number" name="" id="value-expense" class="display align-items justify-items" placeholder="₹0.00">
                 </div>
+                <div class="expense-merchant-input display font justify-items">
+                    <label for="merchant-expense">Merschant</label>
+                    <input type="text" name="" id="merchant-expense" class="display align-items justify-items" placeholder="Name of Merchant">
+                </div>
                 <div class="cato-selection font">
                     <p>Select Category</p>
-                    <div class="grid-cato font">
+                    <div class="grid-cato cato-e font">
                         <button class="buttons dining display align-items justify-items">
                             <i class="fa-solid fa-utensils"></i>
                             <p>Dining</p>
@@ -119,8 +132,104 @@
                 </div>
             </form>
             <div class="save-cancel font display align-items">
-                <button class="cancel commonBtn">Cancel</button>
-                <button class="add commonBtn">Save Expense</button>
+                <button class="cancel cancelie commonBtn">Cancel</button>
+                <button class="add cancelie commonBtn">Save Expense</button>
+            </div>
+        </div>
+    </main>
+    <main class="add-income-main add-expense-incomemain display align-items justify-items disable">
+        <div class="add-income-page display add-expense-income-page justify-items">
+            <div class="upper-add-expense-income display">
+                <div class="add-expense-income-text font">
+                    <h1>New Income</h1>
+                    <p>Log your transaction to keep track of your budget.</p>
+                </div>
+                <div class="close-expense">
+                    <button class="class-cancel-i">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+            <form class="income-form expense-income-form">
+                <div class="expense-value-input display align-items justify-items">
+                    <input type="number" name="" id="value-expense" class="display align-items justify-items" placeholder="₹0.00">
+                </div>
+                <div class="expense-merchant-input display font justify-items">
+                    <label for="merchant-expense">Merchant</label>
+                    <input type="text" name="" id="merchant-expense" class="display align-items justify-items" placeholder="Name of Merchant">
+                </div>
+                <div class="cato-selection font">
+                    <p>Select Category</p>
+                    <div class="grid-cato cato-i font">
+                        <button class="buttons salary display align-items justify-items">
+                            <i class="fa-solid fa-money-check-dollar"></i>
+                            <p>Salary</p>
+                        </button>
+                        <button class="buttons side-salary display align-items justify-items">
+                            <i class="fa-solid fa-money-bill-trend-up"></i>
+                            <p>Micro-Business</p>
+                        </button>
+                        <button class="buttons investment display align-items justify-items">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                            <p>Investment</p>
+                        </button>
+                        <button class="buttons other display align-items justify-items">
+                            <i class="fa-solid fa-ellipsis"></i>
+                            <p>Other</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="date-method-input display align-items font">
+                    <div class="date-input fix-copy-val display">
+                        <label for="date-value">Select Date</label>
+                        <div class="date-value-icon">
+                            <i class="fa-solid fa-calendar"></i>
+                            <input type="date" name="" id="date-value" class="date-value insel">
+                        </div>
+                    </div>
+                    <div class="payment-type-input fix-copy-val display">
+                        <label for="payment-type-value">Select Payment Method</label>
+                        <div class="payment-type-icon">
+                            <i class="fa-solid fa-money-bill"></i>
+                            <select name="payment-type" id="payment-type" class="insel">
+                                <option value="defaultmethod">Select Payment Method</option>
+                                <option value="applepay">Apple Pay</option>
+                                <option value="gpay">Google Pay</option>
+                                <option value="samsungpay">Samsung Pay</option>
+                                <option value="amazonpay">Amazon Pay</option>
+                                <option value="debitcard">Debit Card</option>
+                                <option value="creditcard">Credit Card</option>
+                                <option value="cash">Cash</option>
+                                <option value="cheque">Cheque</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="expense-description font display">
+                    <label for="textarea">Note (optional)</label>
+                    <textarea name="expense-description" id="expense-description" placeholder="What was this for?"></textarea>
+                </div>
+            </form>
+            <div class="save-cancel font display align-items">
+                <button class="cancel-i cancelie commonBtn">Cancel</button>
+                <button class="add-i cancelie commonBtn">Save Expense</button>
+            </div>
+        </div>
+    </main>
+    <main class="transaction display align-items font">
+        <div class="transaction-head display justify-items">
+            <h1>Transaction</h1>
+            <p>Manage and track your financial activities across all linked accounts.</p>
+        </div>
+        <div class="transaction-info display justify-items">
+            <div class="upper-transaction display align-items ">
+                <h2>Date</h2>
+                <h2>Merchant</h2>
+                <h2>Category</h2>
+                <h2>Type</h2>
+                <h2>Status</h2>
+                <h2>Amount</h2>
+                <h2>Action</h2>
             </div>
         </div>
     </main>
