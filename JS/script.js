@@ -10,7 +10,9 @@ const cross = document.querySelector('.class-cancel');
 const add_e = document.querySelector('.add-expense-to');
 const add_i = document.querySelector('.add-income');
 const cancel_i = document.querySelector('.cancel-i');
-const cross_i = document.querySelector('.class-cancel-i')
+const cross_i = document.querySelector('.class-cancel-i');
+const final_i = document.querySelector('.add-i');
+const final_e = document.querySelector('.add-e');
 
 add_e.addEventListener("click", () => {
 
@@ -67,4 +69,22 @@ cross_i.addEventListener("click", () => {
     plus_add.classList.remove("disable")
     header.classList.remove("disable")
     
+});
+
+final_i.addEventListener("click", () => {
+
+    form_add_income.classList.remove("able")
+    form_add_income.classList.add("disable")
+    header.classList.remove("disable")
+    plus_add.classList.remove("disable")
+
+});
+
+final_e.addEventListener("click", () => {
+
+    form_add_expense.classList.remove("able")
+    form_add_expense.classList.add("disable")
+    header.classList.remove("disable")
+    plus_add.classList.remove("disable")
+
 });
