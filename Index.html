@@ -66,35 +66,35 @@
                 <div class="cato-selection font">
                     <p>Select Category</p>
                     <div class="grid-cato cato-e font">
-                        <button type="button" class="buttons dining display align-items justify-items">
+                        <button type="button" value="dining" class="buttons_e buttons_ei dining display align-items justify-items">
                             <i class="fa-solid fa-utensils"></i>
                             <p>Dining</p>
                         </button>
-                        <button type="button" class="buttons shopping display align-items justify-items">
+                        <button type="button" value="Shopping" class="buttons_e buttons_ei shopping display align-items justify-items">
                             <i class="fa-solid fa-bag-shopping"></i>
                             <p>Shopping</p>
                         </button>
-                        <button type="button" class="buttons transport display align-items justify-items">
+                        <button type="button" value="Transport" class="buttons_e buttons_ei transport display align-items justify-items">
                             <i class="fa-solid fa-car"></i>
                             <p>Transport</p>
                         </button>
-                        <button type="button" class="buttons bills display align-items justify-items">
+                        <button type="button" value="Biils" class="buttons_e buttons_ei bills display align-items justify-items">
                             <i class="fa-solid fa-receipt"></i>
                             <p>Biils</p>
                         </button>
-                        <button type="button" class="buttons health display align-items justify-items">
+                        <button type="button" value="Health" class="buttons_e buttons_ei health display align-items justify-items">
                             <i class="fa-solid fa-stethoscope"></i>
                             <p>Health</p>
                         </button>
-                        <button type="button" class="buttons leisure display align-items justify-items">
+                        <button type="button" value="Leisure" class="buttons_e buttons_ei leisure display align-items justify-items">
                             <i class="fa-solid fa-masks-theater"></i>
                             <p>Leisure</p>
                         </button>
-                        <button type="button" class="buttons housing display align-items justify-items">
+                        <button type="button" value="Housing" class="buttons_e buttons_ei housing display align-items justify-items">
                             <i class="fa-solid fa-home"></i>
                             <p>Housing</p>
                         </button>
-                        <button type="button" class="buttons other display align-items justify-items">
+                        <button type="button" value="Other" class="buttons_e buttons_ei other display align-items justify-items">
                             <i class="fa-solid fa-ellipsis"></i>
                             <p>Other</p>
                         </button>
@@ -105,14 +105,14 @@
                         <label for="date-value">Select Date</label>
                         <div class="date-value-icon">
                             <i class="fa-solid fa-calendar"></i>
-                            <input type="date" name="" id="date-value" class="date-value insel">
+                            <input type="date" name="" id="date-value" class="date-valuee insel">
                         </div>
                     </div>
                     <div class="payment-type-input fix-copy-val display">
                         <label for="payment-type-value">Select Payment Method</label>
                         <div class="payment-type-icon">
                             <i class="fa-solid fa-money-bill"></i>
-                            <select name="payment-type" id="payment-type" class="select-method insel">
+                            <select name="payment-type" id="payment-type" class="select-method-e insel">
                                 <option value="defaultmethod">Select Payment Method</option>
                                 <option value="applepay">Apple Pay</option>
                                 <option value="gpay">Google Pay</option>
@@ -152,28 +152,28 @@
             </div>
             <form class="income-form expense-income-form">
                 <div class="expense-value-input display align-items justify-items">
-                    <input type="number" name="" id="value-expense" class="display align-items justify-items" placeholder="₹0.00">
+                    <input type="number" name="" id="value-expense" class="price-income display align-items justify-items" placeholder="₹0.00">
                 </div>
                 <div class="expense-merchant-input display font justify-items">
                     <label for="merchant-expense">Merchant</label>
-                    <input type="text" name="" id="merchant-expense" class="display align-items justify-items" placeholder="Name of Merchant">
+                    <input type="text" name="" id="merchant-expense" class="merchant-income display align-items justify-items" placeholder="Name of Merchant">
                 </div>
                 <div class="cato-selection font">
                     <p>Select Category</p>
                     <div class="grid-cato cato-i font">
-                        <button class="buttons salary display align-items justify-items">
+                        <button type="button" value="Salary" class="buttons_i buttons_ei salary display align-items justify-items">
                             <i class="fa-solid fa-money-check-dollar"></i>
                             <p>Salary</p>
                         </button>
-                        <button class="buttons side-salary display align-items justify-items">
+                        <button type="button" value="Micro-Business" class="buttons_i buttons_ei side-salary display align-items justify-items">
                             <i class="fa-solid fa-money-bill-trend-up"></i>
                             <p>Micro-Business</p>
                         </button>
-                        <button class="buttons investment display align-items justify-items">
+                        <button type="button" value="Investment" class="buttons_i buttons_ei investment display align-items justify-items">
                             <i class="fa-solid fa-hand-holding-dollar"></i>
                             <p>Investment</p>
                         </button>
-                        <button class="buttons other display align-items justify-items">
+                        <button type="button" value="Other" class="buttons_i buttons_ei other display align-items justify-items">
                             <i class="fa-solid fa-ellipsis"></i>
                             <p>Other</p>
                         </button>
@@ -184,14 +184,14 @@
                         <label for="date-value">Select Date</label>
                         <div class="date-value-icon">
                             <i class="fa-solid fa-calendar"></i>
-                            <input type="date" name="" id="date-value" class="date-value insel">
+                            <input type="date" name="" id="date-value" class="date-valuei insel">
                         </div>
                     </div>
                     <div class="payment-type-input fix-copy-val display">
                         <label for="payment-type-value">Select Payment Method</label>
                         <div class="payment-type-icon">
                             <i class="fa-solid fa-money-bill"></i>
-                            <select name="payment-type" id="payment-type" class="insel">
+                            <select name="payment-type" id="payment-type" class="select-method-i insel">
                                 <option value="defaultmethod">Select Payment Method</option>
                                 <option value="applepay">Apple Pay</option>
                                 <option value="gpay">Google Pay</option>
@@ -207,7 +207,7 @@
                 </div>
                 <div class="expense-description font display">
                     <label for="textarea">Note (optional)</label>
-                    <textarea name="expense-description" id="expense-description" placeholder="What was this for?"></textarea>
+                    <textarea name="expense-description" id="expense-description" class="textarea-in" placeholder="What was this for?"></textarea>
                 </div>
             </form>
             <div class="save-cancel font display align-items">
@@ -222,7 +222,7 @@
             <p>Manage and track your financial activities across all linked accounts.</p>
         </div>
         <div class="transaction-info display justify-items">
-            <div class="upper-transaction display align-items ">
+            <div class="upper-transaction grid-prop display align-items ">
                 <h2>Date</h2>
                 <h2>Merchant</h2>
                 <h2>Category</h2>
@@ -231,9 +231,14 @@
                 <h2>Amount</h2>
                 <h2>Action</h2>
             </div>
+            <div class="transaction-box-his font">
+                
+            </div>
         </div>
     </main>
     <script src="JS/script.js"></script>
-    <script src="JS/add-data.js"></script>
+    <script src="JS/add-data-income.js"></script>
+    <script src="JS/add-data_expense.js"></script>
+    <script src="JS/print-transaction.js"></script>
 </body>
 </html>

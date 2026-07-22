@@ -231,7 +231,7 @@
         
         .grid-cato {
 
-            .buttons {
+            .buttons_ei {
                 outline: none;
                 background-color: #fff;
                 border: none;
@@ -260,6 +260,15 @@
                 i, 
                 p {
                     color: #006e2f;
+                }
+            }
+
+            .btnfocus {
+                background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%);
+                
+                i,
+                p {
+                    color: #fff;
                 }
             }
         }
