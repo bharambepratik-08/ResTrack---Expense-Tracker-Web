@@ -21,7 +21,7 @@ buttons_e.forEach(button => {
 })
 
 
-const expense_data = JSON.parse(localStorage.getItem("myExpenses")) || [];
+let expense_data = JSON.parse(localStorage.getItem("myExpenses")) || [];
 console.log(expense_data)
 
 
@@ -62,3 +62,10 @@ final_e.addEventListener("click", () => {
 })
 
 
+const clear = document.querySelector('.clear_data');
+
+clear.addEventListener("click", () => {
+    localStorage.clear();
+    expense_data.length = 0,
+    printing(expense_data)
+})
