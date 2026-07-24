@@ -6,6 +6,7 @@
     <title>FinTrack</title>
     <link rel="stylesheet" href="CSS/default.css">
     <link rel="stylesheet" href="CSS/transaction.css">
+    <link rel="stylesheet" href="CSS/analytic.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -17,11 +18,11 @@
             <div class="left-side display">
                 <span class="app-name">FinTrack</span>
                 <div class="acess-others display">
-                    <a href="#" class="navBar-text Dashboard">Dashboard</a>
-                    <a href="#" class="navBar-text Transition">Transactions</a>
-                    <a href="#" class="navBar-text Analytics">Analytics</a>
-                    <a href="#" class="navBar-text Budgets">Budgets</a>
-                    <a href="#" class="navBar-text Setting">Setting</a>
+                    <button class="navBar-text Dashboard">Dashboard</button>
+                    <button class="navBar-text Transaction">Transactions</button>
+                    <button class="navBar-text Analytics">Analytics</button>
+                    <button class="navBar-text Budgets">Budgets</button>
+                    <button class="navBar-text Setting">Setting</button>
                 </div>
             </div>
             <div class="right-side display align-items justify-items">
@@ -38,6 +39,9 @@
                 </div>
                 <div class="add-income common-plus-ae display align-items justify-items">
                     <button>Add Income</button>
+                </div>
+                <div class="add-saving common-plus-ae display align-items justify-items">
+                    <button>Add Saving</button>
                 </div>
             </div>
         </div>
@@ -170,8 +174,8 @@
                             <p>Micro-Business</p>
                         </button>
                         <button type="button" value="Investment" class="buttons_i buttons_ei investment display align-items justify-items">
-                            <i class="fa-solid fa-hand-holding-dollar"></i>
-                            <p>Investment</p>
+                            <i class="fa-solid fa-store"></i>
+                            <p>Business</p>
                         </button>
                         <button type="button" value="Other" class="buttons_i buttons_ei other display align-items justify-items">
                             <i class="fa-solid fa-ellipsis"></i>
@@ -216,6 +220,88 @@
             </div>
         </div>
     </main>
+    <main class="add-saving-main add-expense-incomemain display align-items justify-items disable">
+        <div class="add-saving-page display add-expense-income-page justify-items">
+            <div class="upper-add-expense-income display">
+                <div class="add-expense-income-text font">
+                    <h1>New Saving</h1>
+                    <p>Log your saving to keep track of your budget.</p>
+                </div>
+                <div class="close-expense">
+                    <button class="class-cancel-s">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+            <form class="saving-form expense-income-form">
+                <div class="expense-value-input display align-items justify-items">
+                    <input type="number" name="" id="value-expense" class="price-saving display align-items justify-items" placeholder="₹0.00">
+                </div>
+                <div class="expense-merchant-input display font justify-items">
+                    <label for="merchant-expense">Merchant</label>
+                    <input type="text" name="" id="merchant-expense" class="merchant-saving display align-items justify-items" placeholder="Name of Merchant">
+                </div>
+                <div class="cato-selection font">
+                    <p>Select Category</p>
+                    <div class="grid-cato cato-s font">
+                        <button type="button" value="Saving" class="buttons_i buttons_ei salary display align-items justify-items">
+                            <i class="fa-solid fa-money-check-dollar"></i>
+                            <p>Saving</p>
+                        </button>
+                        <button type="button" value="Investment" class="buttons_i buttons_ei side-salary display align-items justify-items">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                            <p>Investment</p>
+                        </button>
+                        <button type="button" value="SIP" class="buttons_i buttons_ei investment display align-items justify-items">
+                            <i class="fa-solid fa-money-bill-trend-up"></i>
+                            <p>SIP</p>
+                        </button>
+                        <button type="button" value="Other" class="buttons_i buttons_ei other display align-items justify-items">
+                            <i class="fa-solid fa-ellipsis"></i>
+                            <p>Other</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="date-method-input display align-items font">
+                    <div class="date-input fix-copy-val display">
+                        <label for="date-value">Select Date</label>
+                        <div class="date-value-icon">
+                            <i class="fa-solid fa-calendar"></i>
+                            <input type="date" name="" id="date-value" class="date-values insel">
+                        </div>
+                    </div>
+                    <div class="payment-type-input fix-copy-val display">
+                        <label for="payment-type-value">Select Payment Method</label>
+                        <div class="payment-type-icon">
+                            <i class="fa-solid fa-money-bill"></i>
+                            <select name="payment-type" id="payment-type" class="select-method-s insel">
+                                <option value="defaultmethod">Select Payment Method</option>
+                                <option value="applepay">Apple Pay</option>
+                                <option value="gpay">Google Pay</option>
+                                <option value="samsungpay">Samsung Pay</option>
+                                <option value="amazonpay">Amazon Pay</option>
+                                <option value="debitcard">Debit Card</option>
+                                <option value="creditcard">Credit Card</option>
+                                <option value="cash">Cash</option>
+                                <option value="cheque">Cheque</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="expense-description font display">
+                    <label for="textarea">Note (optional)</label>
+                    <textarea name="expense-description" id="expense-description" class="textarea-sa" placeholder="What was this for?"></textarea>
+                </div>
+            </form>
+            <div class="save-cancel font display align-items">
+                <button class="cancel-s cancelie commonBtn">Cancel</button>
+                <button class="add-s addie commonBtn">Save Expense</button>
+            </div>
+        </div>
+    </main>
+    <main class="dashboard">
+
+    </main>
     <main class="transaction display align-items font">
         <div class="transaction-head display justify-items">
             <h1>Transaction</h1>
@@ -239,9 +325,46 @@
             <button>Clear Data</button>
         </div>
     </main>
+    <main class="analytic display align-items font">
+        <div class="analytic-head display justify-items">
+            <h1>Performance Analytics</h1>
+            <p>Visualize your financial health and spending patterns.</p>
+        </div>
+        <div class="analytics-box display">
+            <div class="total-saving common-box-ana display">
+                <div class="icon-ana display align-items justify-items">
+                    <i class="fa-solid fa-coins fa-lg"></i>  
+                </div> 
+                <p>NET SAVINGS</p>
+
+            </div>
+            <div class="total-saving common-box-ana display">
+                <div class="icon-ana display align-items justify-items">
+                    <i class="fa-solid fa-money-bills fa-lg"></i>  
+                </div> 
+                <p>TOTAL INFLOW</p>
+
+            </div>
+            <div class="total-saving common-box-ana display">
+                <div class="icon-ana display align-items justify-items">
+                    <i class="fa-solid fa-shopping-cart fa-lg"></i>  
+                </div> 
+                <p>MONTHLY SPEND</p>
+
+            </div>
+            <div class="total-saving common-box-ana display">
+                <div class="icon-ana display align-items justify-items">
+                    <i class="fa-solid fa-arrow-trend-up fa-lg"></i>  
+                </div> 
+                <p>DAILY AVG</p>
+
+            </div>
+        </div>
+    </main>
     <script src="JS/script.js"></script>
     <script src="JS/add-data-income.js"></script>
     <script src="JS/add-data_expense.js"></script>
     <script src="JS/print-transaction.js"></script>
+    <script src="JS/add-data-saving.js"></script>
 </body>
 </html>

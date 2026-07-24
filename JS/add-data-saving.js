@@ -1,0 +1,63 @@
+//Saving data naming and adding to local storage
+
+const merchant_s = document.querySelector('.merchant-saving');
+const date_s = document.querySelector('.date-values');
+const method_s = document.querySelector('.select-method-s');
+const textarea_s = document.querySelector('.textarea-sa');
+const price_s = document.querySelector('.price-saving');
+
+
+const buttons_s = document.querySelectorAll('.buttons_s');
+
+buttons_s.forEach(button => {
+    button.addEventListener( "click", () => { 
+        buttons_s.forEach(c => {
+            c.classList.remove("btnfocus")
+            c.classList.remove("cato_s")
+            })
+        button.classList.add("btnfocus")
+        button.classList.add("cato_s")
+    });
+})
+
+
+function add_data_s () {
+
+    if (!Array.isArray(expense_data)) {
+        expense_data = [];
+    }
+
+    const cato_s = document.querySelector('.cato-s');
+
+    if (!cato_s) {
+        alert("Please select a category first!");
+        return;
+    }
+
+
+    const data = {
+        id: Date.now(),
+        merchant: merchant_s.value,
+        date: date_s.value,
+        method: method_s.value,
+        textarea: textarea_s.value,
+        price: price_s.value,
+        catogery: cato_s.value,
+        act: "Income"
+    }
+
+    expense_data.push(data);
+
+    localStorage.setItem("myExpenses", JSON.stringify(expense_data));
+
+}
+
+final_s.addEventListener("click", () => {
+    add_data_s();    
+    printing(expense_data)
+    merchant_s.textContent = "";
+    date_s.textContent = "";
+    textarea_s.textContent = "";
+    price_s.textContent = "";
+})
+

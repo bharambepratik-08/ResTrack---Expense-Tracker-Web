@@ -4,6 +4,10 @@
     font-family: 'Inter', sans-serif;
 }
 
+body {
+    background: #0B1220;
+}
+
 .font {
     font-family: 'Inter', sans-serif;
 }
@@ -24,9 +28,11 @@
     position: sticky;
     z-index: 1000;
     height: 4rem;
-    background: rgba(247 249 251 / 0.8); 
+    /* background: rgba(247 249 251 / 0.8);  */
+    background-color: #131C31;
     backdrop-filter: blur(12px); 
-    border: 2px solid rgba(226, 232, 240, 0.8);
+    /* border: 2px solid rgba(226, 232, 240, 0.8); */
+    border: 2px solid #131C31;
     box-shadow: 0 1px 2px rgba(0,0,0,0.04);
     justify-content: space-between;
     width: 100%;
@@ -53,6 +59,10 @@
 .navBar-text {
     color: rgb(92 100 122);
     text-decoration-line: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 16px;
 }
 
 .navBar-text:hover {
@@ -99,7 +109,7 @@
     height: 100px;
     width: 200px;
     padding: auto;
-    gap: 14px;
+    gap: 12px;
 }
 
 .add-expense:hover .extras {
@@ -252,6 +262,10 @@
 
             }
 
+            .buttons_ei:hover {
+                cursor: pointer;
+            }
+
             .buttons:hover {
                 background-color: #f0fdf4;
                 color: #006e2f;
@@ -281,7 +295,8 @@
             gap: 0.8rem;
         }
 
-        .cato-i {
+        .cato-i,
+        .cato-s {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);

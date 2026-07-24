@@ -1,0 +1,44 @@
+.analytic {
+    padding: 2rem;
+    flex-direction: column;
+    gap: 2rem;
+
+    .analytic-head{
+        flex-direction: column;
+
+        p {
+            color: #6d6d6d;
+        }
+    }
+}
+
+.analytics-box {
+    gap: 36px;
+    min-width: 480px;
+}
+
+.icon-ana {
+    height: 46px;
+    width: 46px;
+    color: #fff;
+    border-radius: 12px;
+    background: #131C31;
+
+    i {
+        height: 24px;
+        width: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.common-box-ana {
+    gap: 12px;
+    flex-direction: column;
+    border-radius: 16px;
+    background-color: #0a0e18;
+    color: #6d6d6d;
+    padding: 24px;
+    min-width: 200px
+}

@@ -26,7 +26,7 @@ function printing (data) {
             </div>
             <h3 class="cato_div display align-items justify-items">${cato_details}</h3>
             <h3 class="act_div display align-items justify-items">${act}</h3>
-            <h3 class="display align-items justify-items">Completed</h3>
+            <h3 class="display-type display align-items justify-items">Completed</h3>
             <h3 class="price_div ${price_color(pack)} display align-items justify-items">${price_details}</h3>
             <div class="button_div display align-items justify-items">
                 <button class="clear_div"><i class="fa-regular fa-trash-can"></i></button>
