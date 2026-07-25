@@ -22,18 +22,16 @@ buttons_s.forEach(button => {
 
 
 function add_data_s () {
-
     if (!Array.isArray(expense_data)) {
         expense_data = [];
     }
 
-    const cato_s = document.querySelector('.cato-s');
+    const cato_s = document.querySelector('.cato_s'); 
 
     if (!cato_s) {
         alert("Please select a category first!");
         return;
     }
-
 
     const data = {
         id: Date.now(),
@@ -43,21 +41,31 @@ function add_data_s () {
         textarea: textarea_s.value,
         price: price_s.value,
         catogery: cato_s.value,
-        act: "Income"
+        act: "Saving"
     }
 
     expense_data.push(data);
-
     localStorage.setItem("myExpenses", JSON.stringify(expense_data));
-
 }
 
-final_s.addEventListener("click", () => {
-    add_data_s();    
-    printing(expense_data)
-    merchant_s.textContent = "";
-    date_s.textContent = "";
-    textarea_s.textContent = "";
-    price_s.textContent = "";
-})
+const final_s = document.querySelector('.add-s');
 
+final_s.addEventListener("click", () => {
+    add_data_s();
+    printing(expense_data);
+    calculateSavings();
+    calculateDailyAvg();
+    updateAnalyticsChart(); 
+
+    // Clear Inputs
+    merchant_s.value = ""; 
+    date_s.value = "";
+    textarea_s.value = "";
+    price_s.value = "";
+
+    form_add_saving.classList.remove("able");
+    form_add_saving.classList.add("disable");
+    header.classList.remove("disable");
+    plus_add.classList.remove("disable");
+    transaction.classList.remove("disable");
+});

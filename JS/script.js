@@ -15,9 +15,6 @@ const cancel_i = document.querySelector('.cancel-i');
 const cross_i = document.querySelector('.class-cancel-i');
 const cancel_s = document.querySelector('.cancel-s');
 const cross_s = document.querySelector('.class-cancel-s');
-const final_i = document.querySelector('.add-i');
-const final_e = document.querySelector('.add-e');
-const final_s = document.querySelector('.add-s')
 const dashboard = document.querySelector('.dashboard')
 const dashboard_b = document.querySelector('.Dashboard')
 const transaction = document.querySelector('.transaction')
@@ -37,11 +34,10 @@ dashboard_b.addEventListener("click", () => {
 })
 
 analytics_b.addEventListener("click", () => {
-    dashboard.classList.add("disable")
-    transaction.classList.add("disable")
-    analytics.classList.remove("disable")
-})
-
+    dashboard.classList.add("disable");
+    transaction.classList.add("disable");
+    analytics.classList.remove("disable");
+});
 add_e.addEventListener("click", () => {
 
     form_add_expense.classList.remove("disable");
@@ -127,34 +123,10 @@ cross_s.addEventListener("click", () => {
     
 });
 
-final_i.addEventListener("click", () => {
-
-    form_add_income.classList.remove("able")
-    form_add_income.classList.add("disable")
-    header.classList.remove("disable")
-    plus_add.classList.remove("disable")
-    transaction.classList.remove("disable")
-
+document.addEventListener("DOMContentLoaded", () => {
+    calculateDailyAvg()
+    calculateExpense()
+    calculateIncome()
+    calculateSavings()
+    updateAnalyticsChart();
 });
-
-final_e.addEventListener("click", () => {
-
-    form_add_expense.classList.remove("able")
-    form_add_expense.classList.add("disable")
-    header.classList.remove("disable")
-    plus_add.classList.remove("disable")
-    transaction.classList.remove("disable")
-
-});
-
-final_s.addEventListener("click", () => {
-
-    form_add_saving.classList.remove("able")
-    form_add_saving.classList.add("disable")
-    header.classList.remove("disable")
-    plus_add.classList.remove("disable")
-    transaction.classList.remove("disable")
-
-});
-
-

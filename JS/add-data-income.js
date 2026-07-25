@@ -52,12 +52,24 @@ function add_data_i () {
 
 }
 
-final_i.addEventListener("click", () => {
-    add_data_i();    
-    printing(expense_data)
-    merchant_i.textContent = "";
-    date_i.textContent = "";
-    textarea_i.textContent = "";
-    price_i.textContent = "";
-})
+const final_i = document.querySelector('.add-i');
 
+final_i.addEventListener("click", () => {
+    add_data_i();
+    printing(expense_data);
+    calculateIncome();
+    updateAnalyticsChart(); 
+
+    // Clear Inputs
+    merchant_i.value = ""; 
+    date_i.value = "";
+    textarea_i.value = "";
+    price_i.value = "";
+
+    // UI Logic (Moved from script.js)
+    form_add_income.classList.remove("able");
+    form_add_income.classList.add("disable");
+    header.classList.remove("disable");
+    plus_add.classList.remove("disable");
+    transaction.classList.remove("disable");
+});

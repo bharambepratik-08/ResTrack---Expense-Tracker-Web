@@ -56,10 +56,29 @@ function add_data_e () {
 
 }
 
+const final_e = document.querySelector('.add-e');
+
 final_e.addEventListener("click", () => {
-    add_data_e()
-    printing(expense_data)
-})
+    add_data_e();
+    printing(expense_data);
+    calculateExpense();
+    calculateDailyAvg();
+    updateAnalyticsChart();
+    breakdown_co_si ();
+
+    // Clear Inputs
+    merchant_e.value = ""; 
+    date_e.value = "";
+    textarea_e.value = "";
+    price_e.value = "";
+
+    // UI Logic (Moved from script.js)
+    form_add_expense.classList.remove("able");
+    form_add_expense.classList.add("disable");
+    header.classList.remove("disable");
+    plus_add.classList.remove("disable");
+    transaction.classList.remove("disable");
+});
 
 
 const clear = document.querySelector('.clear_data');
@@ -68,4 +87,9 @@ clear.addEventListener("click", () => {
     localStorage.clear();
     expense_data.length = 0,
     printing(expense_data)
+    updateAnalyticsChart();
+    calculateExpense()
+    calculateIncome()
+    calculateSavings()
+    calculateDailyAvg ()
 })

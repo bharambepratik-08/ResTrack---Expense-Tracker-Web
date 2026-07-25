@@ -40,5 +40,82 @@
     background-color: #0a0e18;
     color: #6d6d6d;
     padding: 24px;
-    min-width: 200px
+    min-width: 300px
 }
+
+.monthly-chart {
+    min-width: 1200px;
+    max-width: 1600px;
+    height: 350px; 
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.cato-breakdown {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+    width: 80%;
+}
+
+.grid-item {
+    padding: 20px;
+    border-radius: 16px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 140px;
+    transition: transform 0.2s;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+}
+
+.cat-name {
+    font-size: 0.75rem;
+    font-weight: 700;
+    opacity: 0.8;
+    letter-spacing: 1px;
+}
+
+.cat-amount {
+    font-size: 1.8rem;
+    margin-top: 10px;
+}
+
+.housing-div { 
+    background-color: #059669; 
+}
+
+.dining-div { 
+    background-color: #EA580C;
+}
+
+.shopping-div { 
+    background-color: #2563EB; 
+}
+  
+.transport-div { 
+    background-color: #7C3AED; 
+}
+
+.bills-div { 
+    background-color: #DB2777; 
+}
+
+.health-div { 
+    background-color: #0891B2; 
+}
+
+.leisure-div {
+    background-color: #4F46E5; 
+}
+
+.other-div { 
+    background-color: #4B5563; 
+} 

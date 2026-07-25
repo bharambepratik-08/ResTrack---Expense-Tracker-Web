@@ -38,6 +38,11 @@ function printing (data) {
         deleteButton.addEventListener("click", () => {
             const customID = pack.id;
             clear_specific(customID);
+            calculateExpense();
+            calculateIncome();
+            calculateSavings();
+            calculateDailyAvg ();
+            updateAnalyticsChart();
         });
 
         transacbox.appendChild(card);
