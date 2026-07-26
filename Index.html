@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinTrack</title>
     <link rel="stylesheet" href="CSS/default.css">
+    <link rel="stylesheet" href="CSS/dashboard.css">
     <link rel="stylesheet" href="CSS/transaction.css">
     <link rel="stylesheet" href="CSS/analytic.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
@@ -26,6 +27,9 @@
                 </div>
             </div>
             <div class="right-side display align-items justify-items">
+                <button id="theme-toggle" style="background:none; border:none; color:inherit; cursor:pointer; margin-right:15px; font-size:1.2rem;">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
                 <i class="fa-regular fa-circle-user"></i>
             </div>
         </div>
@@ -299,8 +303,46 @@
             </div>
         </div>
     </main>
-    <main class="dashboard">
-
+    <main class="dashboard display align-items justify-items">
+        <div class="dashboard-head">
+            <h2>Good Morning, Alex</h2>
+            <p>Here's what's happening with your finances today.</p>
+        </div>
+        <div class="dashboard-box display">
+            <div class="total-saving common-box-ana display">
+                <div class="icon-ana display align-items justify-items">
+                    <i class="fa-solid fa-coins fa-lg"></i>  
+                </div> 
+                <p>TOTAL BALANCE</p>
+                <h1 class="total-balance"></h1>
+            </div>
+            <div class="total-saving common-box-ana display">
+                <div class="icon-ana display align-items justify-items">
+                    <i class="fa-solid fa-money-bills fa-lg"></i>  
+                </div> 
+                <p>MONTHLY INCOME</p>
+                <h1 class="monthly-income"></h1>
+            </div>
+            <div class="total-saving common-box-ana display">
+                <div class="icon-ana display align-items justify-items">
+                    <i class="fa-solid fa-shopping-cart fa-lg"></i>  
+                </div> 
+                <p>MONTHLY EXPENSE</p>
+                <h1 class="monthly-expense"></h1>
+            </div>
+            <div class="total-saving common-box-ana display">
+                <div class="icon-ana display align-items justify-items">
+                    <i class="fa-solid fa-arrow-trend-up fa-lg"></i>  
+                </div> 
+                <p>TOTAL SAVING</p>
+                <h1 class="total-savings"></h1>
+            </div>
+        </div>
+        <div class="recent-budget">
+            <div class="recent-transaction display align-items justify-items">
+                <h3>Recent Transaction</h3>
+            </div>
+        </div>
     </main>
     <main class="transaction disable display align-items font">
         <div class="transaction-head display justify-items">
@@ -364,14 +406,20 @@
         <div class="monthly-chart">
             <canvas id="analyticsChart"></canvas>
         </div>
-        <div class="cato-breakdown">
+        <div class="breakdown">
+            <h3>Category Breakdown</h3>
+            <p>Where your money goes</p>
+            <div class="cato-breakdown">
 
+            </div>
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="JS/script.js"></script> 
+    <script src="Js/recent-transaction.js"></script>
     <script src="JS/add-data_expense.js"></script> 
     <script src="JS/add-data-income.js"></script>
+    <script src="JS/dashboard-ana.js"></script>
     <script src="JS/add-data-saving.js"></script>
     <script src="JS/analystics_chart.js"></script>
     <script src="JS/analytics-sum.js"></script>

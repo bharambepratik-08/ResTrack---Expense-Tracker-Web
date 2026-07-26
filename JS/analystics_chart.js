@@ -82,7 +82,7 @@ function updateAnalyticsChart() {
             responsive: true,
             maintainAspectRatio: false,
             plugins: {
-                legend: { labels: { color: 'white' } }
+                legend: { labels: { color: 'grey' } }
             },
             scales: {
                 x: { 

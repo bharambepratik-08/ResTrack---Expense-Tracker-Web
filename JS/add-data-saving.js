@@ -55,7 +55,10 @@ final_s.addEventListener("click", () => {
     printing(expense_data);
     calculateSavings();
     calculateDailyAvg();
+    dash_saving()
+    dash_total_balance()
     updateAnalyticsChart(); 
+    print_recent_transaction();
 
     // Clear Inputs
     merchant_s.value = ""; 

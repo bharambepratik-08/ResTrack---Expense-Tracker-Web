@@ -43,6 +43,11 @@ function printing (data) {
             calculateSavings();
             calculateDailyAvg ();
             updateAnalyticsChart();
+            dash_expense();
+            dash_income();
+            dash_saving();
+            dash_total_balance();
+            print_recent_transaction();
         });
 
         transacbox.appendChild(card);

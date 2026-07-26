@@ -63,8 +63,11 @@ final_e.addEventListener("click", () => {
     printing(expense_data);
     calculateExpense();
     calculateDailyAvg();
+    dash_expense()
+    dash_total_balance()
     updateAnalyticsChart();
     breakdown_co_si ();
+    print_recent_transaction()
 
     // Clear Inputs
     merchant_e.value = ""; 
@@ -92,4 +95,10 @@ clear.addEventListener("click", () => {
     calculateIncome()
     calculateSavings()
     calculateDailyAvg ()
+    dash_expense();
+    dash_income();
+    dash_saving();
+    dash_total_balance();
+    breakdown_co_si();
+    print_recent_transaction();
 })

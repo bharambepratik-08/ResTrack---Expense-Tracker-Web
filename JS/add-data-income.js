@@ -58,15 +58,16 @@ final_i.addEventListener("click", () => {
     add_data_i();
     printing(expense_data);
     calculateIncome();
+    dash_income();
+    dash_total_balance();
     updateAnalyticsChart(); 
+    print_recent_transaction();
 
-    // Clear Inputs
     merchant_i.value = ""; 
     date_i.value = "";
     textarea_i.value = "";
     price_i.value = "";
 
-    // UI Logic (Moved from script.js)
     form_add_income.classList.remove("able");
     form_add_income.classList.add("disable");
     header.classList.remove("disable");

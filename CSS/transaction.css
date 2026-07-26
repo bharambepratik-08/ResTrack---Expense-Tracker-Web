@@ -20,8 +20,7 @@
         .upper-transaction {
             border-top-left-radius: 16px;
             border-top-right-radius: 16px;
-            /* background-color: rgb(236, 238, 240); */
-            background-color: #131C31;
+            background-color: var(--nav-bg);
             padding: 16px 0;
 
             h2 {
@@ -61,8 +60,7 @@
         #iconic-merchant {
             color: #006e2f;
             font-size: 18px;
-            /* background-color: rgb(236, 238, 240); */
-            background-color: #131C31;
+            background-color: var(--card-bg);
             height: 32px;
             width: 32px;
             border-radius: 8px;
