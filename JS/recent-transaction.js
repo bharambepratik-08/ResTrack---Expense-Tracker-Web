@@ -1,7 +1,6 @@
-const recent_box = document.querySelector(".recent-budget");
+const recent_list_container = document.querySelector("#recent-transactions-list");
 
 function inner_recent(data) {
-  
     if (!data) return;
 
     const card = document.createElement("div");
@@ -31,12 +30,12 @@ function inner_recent(data) {
             </div>
         `;
     
-    recent_box.appendChild(card);
+    recent_list_container.appendChild(card);
 }
 
 function print_recent_transaction() {
-
-    recent_box.innerHTML = '<div class="recent-transaction"><h3>Recent Transaction</h3></div>';
+    recent_list_container.innerHTML = '<div class="recent-transaction"><h3>Recent Transaction</h3></div>';
+    
     const start = expense_data.length - 1;
     const end = Math.max(0, expense_data.length - 4);
 

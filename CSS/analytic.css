@@ -44,8 +44,7 @@
 }
 
 .monthly-chart {
-    min-width: 1200px;
-    max-width: 1600px;
+    width: 80%;
     height: 350px; 
     margin-top: 20px;
     background-color: var(--bg-color);

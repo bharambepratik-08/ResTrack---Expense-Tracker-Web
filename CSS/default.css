@@ -11,6 +11,9 @@
     --card-bg: #0a0e18;
     --border-color: #131C31;
     --input-bg: #ffffff;
+    --bud-bg: #131C31;
+    --bud-bgh: #131C31;
+    --bud-bght: #2a2e38;
 }
 
 
@@ -21,6 +24,9 @@
     --card-bg: #ffffff;
     --border-color: #e2e8f0;
     --input-bg: #f1f5f9;
+    --bud-bg: rgb(188 203 185 / 0.5);
+    --bud-bgh: #16a34a;
+    --bud-bght: #006e2f;
 }
 
 body {
@@ -287,6 +293,8 @@ body {
 
             .buttons_ei:hover {
                 cursor: pointer;
+                transform: translateY(-3px);
+                transition: 0.3s;
             }
 
             .buttons:hover {

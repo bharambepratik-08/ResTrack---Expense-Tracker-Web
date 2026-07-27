@@ -46,7 +46,7 @@ function add_data_e () {
         method: method_e.value,
         textarea: textarea_e.value,
         price: price_e.value,
-        catogery: cato_e.value,
+        catogery: cato_e.getAttribute('value'),
         act: "Expense"
     }
 
@@ -68,6 +68,8 @@ final_e.addEventListener("click", () => {
     updateAnalyticsChart();
     breakdown_co_si ();
     print_recent_transaction()
+    updateSpendingCategoryChart()
+    data_budget_pri(budget_data);
 
     // Clear Inputs
     merchant_e.value = ""; 
@@ -101,4 +103,5 @@ clear.addEventListener("click", () => {
     dash_total_balance();
     breakdown_co_si();
     print_recent_transaction();
+    updateSpendingCategoryChart()
 })

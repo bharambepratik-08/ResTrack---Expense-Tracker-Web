@@ -59,6 +59,7 @@ final_s.addEventListener("click", () => {
     dash_total_balance()
     updateAnalyticsChart(); 
     print_recent_transaction();
+    updateSpendingCategoryChart()
 
     // Clear Inputs
     merchant_s.value = ""; 

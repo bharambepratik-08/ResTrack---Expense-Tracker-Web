@@ -4,6 +4,7 @@ const plus_add = document.querySelector('.add-expense');
 const form_add_expense = document.querySelector('.add-expense-main');
 const form_add_income = document.querySelector('.add-income-main');
 const form_add_saving = document.querySelector('.add-saving-main');
+const form_add_budget = document.querySelector('.budget-form-add');
 const header = document.querySelector('.navBar-header');
 const transaction_b = document.querySelector('.Transaction')
 const cancel = document.querySelector('.cancel');
@@ -14,30 +15,46 @@ const add_s = document.querySelector('.add-saving');
 const cancel_i = document.querySelector('.cancel-i');
 const cross_i = document.querySelector('.class-cancel-i');
 const cancel_s = document.querySelector('.cancel-s');
+const cancel_b = document.querySelector('.cancel-b');
 const cross_s = document.querySelector('.class-cancel-s');
+const cross_b = document.querySelector('.class-cancel-b')
 const dashboard = document.querySelector('.dashboard')
 const dashboard_b = document.querySelector('.Dashboard')
 const transaction = document.querySelector('.transaction')
 const analytics_b = document.querySelector('.Analytics')
 const analytics = document.querySelector(".analytic")
+const budget = document.querySelector(".budget")
+const budget_b = document.querySelector(".Budgets")
+const add_b = document.querySelector('.budget-btn');
 
 transaction_b.addEventListener("click", () => {
     dashboard.classList.add("disable")
     transaction.classList.remove("disable")
     analytics.classList.add("disable")
+    budget.classList.add("disable")
 })
 
 dashboard_b.addEventListener("click", () => {
     dashboard.classList.remove("disable")
     transaction.classList.add("disable")
     analytics.classList.add("disable")
+    budget.classList.add("disable")
 })
 
 analytics_b.addEventListener("click", () => {
     dashboard.classList.add("disable");
     transaction.classList.add("disable");
     analytics.classList.remove("disable");
+    budget.classList.add("disable")
 });
+
+budget_b.addEventListener("click", () => {
+    dashboard.classList.add("disable");
+    transaction.classList.add("disable");
+    analytics.classList.add("disable");
+    budget.classList.remove("disable")
+});
+
 add_e.addEventListener("click", () => {
 
     form_add_expense.classList.remove("disable");
@@ -52,6 +69,16 @@ add_i.addEventListener("click", () => {
 
     form_add_income.classList.remove("disable");
     form_add_income.classList.add('able');
+    header.classList.add("disable")
+    transaction.classList.add("disable");
+    plus_add.classList.add("disable")
+
+})
+
+add_b.addEventListener("click", () => {
+
+    form_add_budget.classList.remove("disable");
+    form_add_budget.classList.add('able');
     header.classList.add("disable")
     transaction.classList.add("disable");
     plus_add.classList.add("disable")
@@ -96,10 +123,28 @@ cancel_i.addEventListener("click", () => {
 
 });
 
+cancel_b.addEventListener("click", () => {
+
+    form_add_budget.classList.add("disable")
+    form_add_budget.classList.remove("able")
+    header.classList.remove("disable")
+    plus_add.classList.remove("disable")
+
+});
+
 cross_i.addEventListener("click", () => {
 
     form_add_income.classList.add("disable")
     form_add_income.classList.remove("able")
+    plus_add.classList.remove("disable")
+    header.classList.remove("disable")
+    
+});
+
+cross_b.addEventListener("click", () => {
+
+    form_add_budget.classList.add("disable")
+    form_add_budget.classList.remove("able")
     plus_add.classList.remove("disable")
     header.classList.remove("disable")
     
@@ -133,6 +178,10 @@ document.addEventListener("DOMContentLoaded", () => {
     dash_saving()
     dash_total_balance()
     updateAnalyticsChart();
+
+    if (budget_data.length > 0) {
+        data_budget_pri(budget_data);
+    }
 });
 
 const themeBtn = document.querySelector('#theme-toggle');

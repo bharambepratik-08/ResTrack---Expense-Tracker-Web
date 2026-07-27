@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="CSS/dashboard.css">
     <link rel="stylesheet" href="CSS/transaction.css">
     <link rel="stylesheet" href="CSS/analytic.css">
+    <link rel="stylesheet" href="CSS/budget.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -220,7 +221,7 @@
             </form>
             <div class="save-cancel font display align-items">
                 <button class="cancel-i cancelie commonBtn">Cancel</button>
-                <button class="add-i addie commonBtn">Save Expense</button>
+                <button class="add-i addie commonBtn">Save Income</button>
             </div>
         </div>
     </main>
@@ -299,7 +300,68 @@
             </form>
             <div class="save-cancel font display align-items">
                 <button class="cancel-s cancelie commonBtn">Cancel</button>
-                <button class="add-s addie commonBtn">Save Expense</button>
+                <button class="add-s addie commonBtn">Save Saving</button>
+            </div>
+        </div>
+    </main>
+    <main class="budget-form-add add-expense-incomemain display font align-items justify-items disable">
+        <div class="budget-form add-expense-income-page">
+            <div class="heading-budget display align-items upper-add-expense-income font">
+                <div>
+                    <h2>Add Budget</h2>
+                    <p>Keep track of your budget by adding it.</p>
+                </div>
+                <div class="close-expense">
+                    <button class="class-cancel-b">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+            <form class="expense-form expense-income-form">
+                <div class="expense-value-input display align-items justify-items">
+                    <input type="number" name="" id="value-expense" class="budget-input display align-items justify-items" placeholder="₹0.00">
+                </div>
+                <div class="cato-selection font">
+                    <p>Select Category</p>
+                    <div class="grid-cato cato-e font">
+                        <button type="button" value="Dining" class="buttons_b buttons_ei dining display align-items justify-items">
+                            <i class="fa-solid fa-utensils"></i>
+                            <p>Dining</p>
+                        </button>
+                        <button type="button" value="Shopping" class="buttons_b buttons_ei shopping display align-items justify-items">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <p>Shopping</p>
+                        </button>
+                        <button type="button" value="Transport" class="buttons_b buttons_ei transport display align-items justify-items">
+                            <i class="fa-solid fa-car"></i>
+                            <p>Transport</p>
+                        </button>
+                        <button type="button" value="Bills" class="buttons_b buttons_ei bills display align-items justify-items">
+                            <i class="fa-solid fa-receipt"></i>
+                            <p>Biils</p>
+                        </button>
+                        <button type="button" value="Health" class="buttons_b buttons_ei health display align-items justify-items">
+                            <i class="fa-solid fa-stethoscope"></i>
+                            <p>Health</p>
+                        </button>
+                        <button type="button" value="Leisure" class="buttons_b buttons_ei leisure display align-items justify-items">
+                            <i class="fa-solid fa-masks-theater"></i>
+                            <p>Leisure</p>
+                        </button>
+                        <button type="button" value="Housing" class="buttons_b buttons_ei housing display align-items justify-items">
+                            <i class="fa-solid fa-home"></i>
+                            <p>Housing</p>
+                        </button>
+                        <button type="button" value="Other" class="buttons_b buttons_ei other display align-items justify-items">
+                            <i class="fa-solid fa-ellipsis"></i>
+                            <p>Other</p>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div class="save-cancel font display align-items">
+                <button class="cancel-b cancelie commonBtn">Cancel</button>
+                <button class="add-b addie commonBtn">Save Budget</button>
             </div>
         </div>
     </main>
@@ -339,8 +401,29 @@
             </div>
         </div>
         <div class="recent-budget">
-            <div class="recent-transaction display align-items justify-items">
-                <h3>Recent Transaction</h3>
+            <div id="recent-transactions-list">
+                <div class="recent-transaction display align-items justify-items">
+                    <h3>Recent Transaction</h3>
+                </div>
+            </div>
+        </div>
+        <div class="budget-chart display align-items">
+            <div class="spending-container display">
+                <div class="spending-chart-box">
+                    <h3>Spending by Category</h3>
+                    <div class="canvas-container">
+                        <canvas id="spendingCategoryChart"></canvas>
+                        <div class="chart-center-text">
+                            <p>TOTAL</p>
+                            <h2 id="chart-total-amount">₹0</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="budgets-table">
+                <div class="head-budget">
+                    <h3>Budgets</h3>
+                </div>
             </div>
         </div>
     </main>
@@ -414,6 +497,27 @@
             </div>
         </div>
     </main>
+    <main class="budget display align-items font disable justify-items">
+        <div class="budget-head">
+            <h2>My Budgets</h2>
+            <p>Organize your financial life with precision. Track your limits and optimize your spending habits in real-time.</p>
+        </div>
+        <div class="budget-items">
+            <div class="add-budget display align-items justify-items">
+                <div class="adder-budget display">
+
+                </div>
+                <button class="budget-btn">
+                    <div class="add-btn-b display align-items justify-items">
+                        <div class="plus-icon display align-items justify-items">
+                            <i class="fa-solid fa-plus" id="iconic-plus"></i>
+                        </div>
+                        <p>Add New Budget</p>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="JS/script.js"></script> 
     <script src="Js/recent-transaction.js"></script>
@@ -425,5 +529,8 @@
     <script src="JS/analytics-sum.js"></script>
     <script src="JS/print-transaction.js"></script>
     <script src="JS/cato_breakdown.js"></script>
+    <script src="JS/dash-cato-char.js"></script>
+    <script src="JS/budget-data-add.js"></script>
+    <script src="JS/budget-print.js"></script>
 </body>
 </html>

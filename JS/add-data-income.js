@@ -62,6 +62,7 @@ final_i.addEventListener("click", () => {
     dash_total_balance();
     updateAnalyticsChart(); 
     print_recent_transaction();
+    updateSpendingCategoryChart()
 
     merchant_i.value = ""; 
     date_i.value = "";
