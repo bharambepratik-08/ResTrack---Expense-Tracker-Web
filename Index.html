@@ -407,11 +407,11 @@
                 </div>
             </div>
         </div>
-        <div class="budget-chart display align-items">
-            <div class="spending-container display">
-                <div class="spending-chart-box">
+        <div class="budget-chart display justify-items">
+            <div class="spending-container display align-items">
+                <div class="spending-chart-box display">
                     <h3>Spending by Category</h3>
-                    <div class="canvas-container">
+                    <div class="canvas-container display">
                         <canvas id="spendingCategoryChart"></canvas>
                         <div class="chart-center-text">
                             <p>TOTAL</p>
@@ -420,9 +420,9 @@
                     </div>
                 </div>
             </div>
-            <div class="budgets-table">
+            <div class="budgets-table display">
                 <div class="head-budget">
-                    <h3>Budgets</h3>
+                    <h2>Budgets</h2>
                 </div>
             </div>
         </div>
@@ -503,10 +503,7 @@
             <p>Organize your financial life with precision. Track your limits and optimize your spending habits in real-time.</p>
         </div>
         <div class="budget-items">
-            <div class="add-budget display align-items justify-items">
-                <div class="adder-budget display">
-
-                </div>
+            <div class="adder-budget-div">
                 <button class="budget-btn">
                     <div class="add-btn-b display align-items justify-items">
                         <div class="plus-icon display align-items justify-items">
@@ -518,6 +515,7 @@
             </div>
         </div>
     </main>
+    
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="JS/script.js"></script> 
     <script src="Js/recent-transaction.js"></script>
@@ -532,5 +530,6 @@
     <script src="JS/dash-cato-char.js"></script>
     <script src="JS/budget-data-add.js"></script>
     <script src="JS/budget-print.js"></script>
+    <script src="JS/recent-budget.js"></script>
 </body>
 </html>

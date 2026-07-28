@@ -11,10 +11,10 @@
 
 .recent-budget {
     background-color: var(--card-bg); 
-    padding: 36px;
+    padding: 24px;
     border-radius: 16px;
     margin: 12px;
-    width: 80%;
+    width: 79%;
 }
 
 .recent-div {
@@ -25,6 +25,10 @@
 
 .recent-div:last-child {
     border-bottom: none;
+}
+
+.head-budget {
+    margin: 0 0 12px 0;
 }
 
 .icon-box #iconic-merchant {
@@ -38,15 +42,17 @@
 }
 
 .spending-container {
-    margin-top: 2rem;
+    margin-top: 0;
     width: 100%;
     max-width: 500px;
 }
 
 .spending-chart-box {
+    flex-direction: column;
     background-color: var(--card-bg);
     padding: 24px;
     border-radius: 24px;
+    align-items: flex-start;
     width: 100%;
 }
 
@@ -59,6 +65,10 @@
     position: relative;
     height: 300px; 
     width: 100%;
+}
+
+.recent-transaction {
+    margin: 0 0 12px 0;
 }
 
 .chart-center-text {
@@ -86,14 +96,25 @@
 
 
 .budget-chart {
-    width: 80%;
+    width: 81%;
     gap: 24px;
     margin: 12px;
 }
 
 .budgets-table {
+    flex-direction: column;
     min-width: 350px;
+    height: 100%;
     background: var(--card-bg);
     border-radius: 24px;
-    padding: 24px;
+    padding: 24px 36px 36px 36px;
+    gap: 24px;
+}
+
+.upper-budget-recent {
+    justify-content: space-between;
+}
+
+.budget-box {
+    gap: 4px;
 }

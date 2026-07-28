@@ -48,6 +48,7 @@ function printing (data) {
             dash_saving();
             dash_total_balance();
             print_recent_transaction();
+            print_recent_budget();
             updateSpendingCategoryChart()
         });
 

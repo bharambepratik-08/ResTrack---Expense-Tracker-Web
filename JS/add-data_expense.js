@@ -27,11 +27,6 @@ console.log(expense_data)
 
 function add_data_e () {
 
-
-    if (!Array.isArray(expense_data)) {
-        expense_data = [];
-    }
-
     const cato_e = document.querySelector('.cato_e');
 
     if (!cato_e) {
@@ -70,6 +65,7 @@ final_e.addEventListener("click", () => {
     print_recent_transaction()
     updateSpendingCategoryChart()
     data_budget_pri(budget_data);
+    print_recent_budget();
 
     // Clear Inputs
     merchant_e.value = ""; 
@@ -91,7 +87,9 @@ const clear = document.querySelector('.clear_data');
 clear.addEventListener("click", () => {
     localStorage.clear();
     expense_data.length = 0,
+    budget_data.length = 0,
     printing(expense_data)
+    data_budget_pri();
     updateAnalyticsChart();
     calculateExpense()
     calculateIncome()
@@ -103,5 +101,6 @@ clear.addEventListener("click", () => {
     dash_total_balance();
     breakdown_co_si();
     print_recent_transaction();
-    updateSpendingCategoryChart()
+    updateSpendingCategoryChart();
+    print_recent_budget();
 })

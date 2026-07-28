@@ -8,12 +8,16 @@
 }
 
 .budget-items {
-    margin: 24px;
+    width: 80%;
+    margin: 0 auto;
+    display: block; 
 }
+
 
 .add-btn-b {
     flex-direction: column;
     gap: 8px;
+    padding: 34px;
     height: 250px;
     width: 250px;
     border-radius: 16px;
@@ -37,8 +41,19 @@
 
 }
 
+.bar-div {
+    width: 100%; 
+    background: #2d2d2d; 
+    height: 8px; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    margin-top: 5px;
+}
+
 .add-budget {
     gap: 24px;
+    width: 80%;
+    flex-wrap: wrap;
 }
 
 .add-btn-b:hover {
@@ -53,18 +68,23 @@
 }
 
 .pad-com {
-    padding: 12px 12px 0 12px;
+    padding: 12px 0 0 0;
 }
 
 .budget-btn {
     outline: none;
     border: none;
     background-color: transparent;
+    display: block;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
 }
 
 .budget-maker {
-    height: 300px;
-    width: 300px;
+    height: 250px;;
+    width: 250px;
     border-radius: 24px;
     background-color: var(--card-bg);
     flex-direction: column;
@@ -89,10 +109,6 @@
         width: 100%;
         align-content: end;
 
-        .cato-adder {
-            width: 100%;
-        }
-
         .used-goal {
             
             flex-direction: row;
@@ -104,4 +120,49 @@
 
 .adder-budget {
     gap: 24px;
+    flex-wrap: wrap;
+}
+
+.adder-budget-div {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 24px;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    margin: 12px 0 0 0
+}
+
+.budget-btn, .budget-div-adder {
+    flex: 0 0 auto;
+}
+
+.budget-box {
+    width: 100%;
+}
+
+.rem {
+    justify-content: space-between;
+}
+
+.delete-button-budget {
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    height: 18px;
+    font-size: 16px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    visibility: none;
+    opacity: 0;
+}
+
+.budget-maker:hover {
+
+    .delete-button-budget {
+        visibility: visible;
+        opacity: 1;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
 }

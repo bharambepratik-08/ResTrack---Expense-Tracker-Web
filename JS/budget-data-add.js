@@ -33,3 +33,13 @@ function budget_box_data() {
     localStorage.setItem("myBudget", JSON.stringify(budget_data));
     max_budget_input.value = ""; 
 }
+
+final_b.addEventListener("click", () => {
+    budget_box_data();
+    data_budget_pri(budget_data);
+
+    form_add_budget.classList.remove("able");
+    form_add_budget.classList.add("disable");
+    header.classList.remove("disable");
+    plus_add.classList.remove("disable");
+});

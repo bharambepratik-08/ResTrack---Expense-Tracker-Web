@@ -1,8 +1,10 @@
 // budget-print.js
-const adder = document.querySelector('.adder-budget');
+const adder = document.querySelector('.adder-budget-div');
+const budgetBtn = document.querySelector('.budget-btn'); 
 
 function data_budget_pri(data) {
-    adder.innerHTML = '';
+    adder.innerHTML = ''; 
+    adder.appendChild(budgetBtn);
 
     data.forEach(item => {
         const matchingExpenses = expense_data.filter(exp => 
@@ -17,14 +19,15 @@ function data_budget_pri(data) {
 
         const card = document.createElement("div");
         card.classList.add("budget-div-adder");
+        card.classList.add(`${item.id}`)
 
         card.innerHTML = `
-            <div class="budget-maker display align-items">
+            <div class="budget-maker display align-items ">
                 <div class="upper-budget-adder display">
                     <div class="icon-adder display align-items justify-items">
                         <i class="${icon_decide(item.catogery)}"></i>
                     </div>
-                    <div class="chart-adder">
+                    <div class="chart-adder display align-items justify-items">
                         <p>${percentage}%</p> 
                     </div>
                 </div>
@@ -37,19 +40,51 @@ function data_budget_pri(data) {
                         <p>Goal: ₹${goal.toLocaleString()}</p>
                     </div>
                     <div class="goal-bar pad-com">
-                        <div style="width: 100%; background: #2d2d2d; height: 8px; border-radius: 10px; overflow: hidden; margin-top: 5px;">
+                        <div class="bar-div">
                             <div style="width: ${percentage}%; background: ${percentage > 90 ? '#ff4d4d' : '#22c55e'}; height: 100%;"></div>
                         </div>
                     </div>
-                    <div class="rem pad-com">
+                    <div class="rem pad-com display align-items">
                         <p>${remaining >= 0 ? `₹${remaining.toLocaleString()} remaining` : `Overspent by ₹${Math.abs(remaining).toLocaleString()}`}</p>
+                        <button class="delete-button-budget">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
                     </div>
                 </div>
             </div>
         `;
-        adder.prepend(card);
+
+        const deleteButton = card.querySelector(".delete-button-budget");
+
+        deleteButton.addEventListener("click", () => {
+            const customID = item.id;
+            clear_budget(customID);
+            data_budget_pri(budget_data)
+            
+        });
+
+        adder.appendChild(card);
     });
 }
+
+
+function clear_budget(idToDelete) {
+
+    const delete_div = document.querySelector(`.${CSS.escape(idToDelete)}`);
+    
+    if (delete_div) {
+        delete_div.remove();
+    } 
+    
+    budget_data = budget_data.filter(item => item.id !== idToDelete);
+
+    localStorage.setItem(
+        "myExpenses",
+        JSON.stringify(budget_data)
+    );
+
+}
+
 
 function icon_decide(data) {
     switch (data) {
@@ -63,13 +98,3 @@ function icon_decide(data) {
         default: return 'fa-solid fa-tag';
     }
 }
-
-final_b.addEventListener("click", () => {
-    budget_box_data();
-    data_budget_pri(budget_data);
-
-    form_add_budget.classList.remove("able");
-    form_add_budget.classList.add("disable");
-    header.classList.remove("disable");
-    plus_add.classList.remove("disable");
-});
