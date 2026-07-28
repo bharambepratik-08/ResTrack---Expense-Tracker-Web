@@ -1,2 +1,2 @@
-# FinTrack---Expense-Tracker-Web
+# ResTrack---Expense-Tracker-Web
 A fully responsive expense tracker, built using [HTML, CSS, JS].
