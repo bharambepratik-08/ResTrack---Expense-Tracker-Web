@@ -79,25 +79,3 @@
     text-align: center;
     pointer-events: none;
 }
-
-.chart-center-text p {
-    font-size: 10px;
-    letter-spacing: 1px;
-    color: #6d6d6d;
-    margin: 0;
-}
-
-.chart-center-text h2 {
-    font-size: 20px;
-    color: var(--text-color);
-    margin: 0;
-    font-weight: 800;
-}
-
-
-.budget-chart {
-    width: 81%;
-    gap: 24px;
-    margin: 12px;
-}
-
