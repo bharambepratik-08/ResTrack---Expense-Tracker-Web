@@ -32,7 +32,7 @@ function inner_budget(data) {
                     </div>
                 </div>
             </div>
-        `;
+    `;
     
     recent_list_budget_cont.appendChild(card);
 }

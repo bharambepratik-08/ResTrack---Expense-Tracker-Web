@@ -268,55 +268,10 @@ body {
             margin-left: 4px;
         }
         
-        .grid-cato {
+        /* .grid-cato {
 
-            .buttons_ei {
-                outline: none;
-                background-color: #fff;
-                border: none;
-                border-radius: 16px;
-                padding: 16px;
-                gap: 5px;
-                flex-direction: column;
-
-                i {
-                    font-size: 24px;
-                    color: #6d6d6d;
-                }
-
-                p {
-                    font-size: 16px;
-                    color: #6d6d6d;
-                }
-
-            }
-
-            .buttons_ei:hover {
-                cursor: pointer;
-                transform: translateY(-3px);
-                transition: 0.3s;
-            }
-
-            .buttons:hover {
-                background-color: #f0fdf4;
-                color: #006e2f;
-                transform: translateY(-1px);
-
-                i, 
-                p {
-                    color: #006e2f;
-                }
-            }
-
-            .btnfocus {
-                background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%);
-                
-                i,
-                p {
-                    color: #fff;
-                }
-            }
-        }
+            
+        } */
 
         .cato-e {
             display: grid;
@@ -326,8 +281,7 @@ body {
             gap: 0.8rem;
         }
 
-        .cato-i,
-        .cato-s {
+        .cato-i {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
@@ -395,22 +349,81 @@ body {
     }
 }
 
+.buttons_ei {
+    outline: none;
+    background-color: #fff;
+    border: none;
+    border-radius: 16px;
+    padding: 16px;
+    gap: 5px;
+    flex-direction: column;
+
+    i {
+        font-size: 24px;
+        color: #6d6d6d;
+    }
+
+    p {
+        font-size: 16px;
+        color: #6d6d6d;
+    }
+
+}
+
+.buttons_ei:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+    transition: 0.3s;
+}
+
+.buttons:hover {
+    background-color: #f0fdf4;
+    color: #006e2f;
+    transform: translateY(-1px);
+
+    i, 
+    p {
+        color: #006e2f;
+    }
+}
+
+.btnfocus {
+    background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%);
+    
+    i,
+    p {
+        color: #fff;
+    }
+}
+
+.cato-s {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    gap: 0.8rem;
+}
+
+.buttons_s {
+    min-width: 23%;
+}
+
 .save-cancel {
     padding: 32px;
     justify-content: end;
     gap: 12px;
 
-    .commonBtn {
-        border: none;
-        outline: none;
-        border-radius: 12px;
-    }
-    
-    .commonBtn:hover {
-        transform: scale(1.03);
-        transition: 0.3s;
-        cursor: pointer;
-    }
+}
+
+.commonBtn {
+    border: none;
+    outline: none;
+    border-radius: 12px;
+}
+
+.commonBtn:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .addie {

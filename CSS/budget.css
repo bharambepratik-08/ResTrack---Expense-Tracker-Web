@@ -212,3 +212,66 @@
     margin: 12px;
 }
 
+.add-special-saving {
+    width: 80%;
+    border-radius: 20px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    padding: 24px;
+    margin: 24px 0 0 0;
+
+    .add-special-btn {
+        margin: 12px 0 0 0;
+        
+        .add-sp-Btn {
+            background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%);
+            color: #fff;
+        }
+    }
+}
+
+.data_printing_special {
+    gap: 12px;
+}
+
+.special-saving-print-box {
+    width: 100%;
+    padding: 12px;
+    flex-direction: column;
+    gap: 8px;
+
+    .per-sspec {
+        justify-content: space-between;
+    }
+
+    .bar-sspec {
+        width: 100%; 
+        background: #2d2d2d; 
+        height: 8px; 
+        border-radius: 10px; 
+        overflow: hidden;
+    }
+}
+
+.delete-button-sspec {
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    height: 18px;
+    font-size: 16px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    visibility: none;
+    opacity: 0;
+}
+
+
+.special-saving-print-box:hover {
+
+    .delete-button-sspec {
+        visibility: visible;
+        opacity: 1;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+}

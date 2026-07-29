@@ -248,16 +248,16 @@
                 </div>
                 <div class="cato-selection font">
                     <p>Select Category</p>
-                    <div class="grid-cato cato-s font">
-                        <button type="button" value="Saving" class="buttons_s buttons_ei salary display align-items justify-items">
+                    <div class="grid-cato cato-s font print-special-saving">
+                        <button type="button" value="Saving" class="buttons_s buttons_ei saving display align-items justify-items">
                             <i class="fa-solid fa-money-check-dollar"></i>
                             <p>Saving</p>
                         </button>
-                        <button type="button" value="Investment" class="buttons_s buttons_ei side-salary display align-items justify-items">
+                        <button type="button" value="Investment" class="buttons_s buttons_ei invetment display align-items justify-items">
                             <i class="fa-solid fa-hand-holding-dollar"></i>
                             <p>Investment</p>
                         </button>
-                        <button type="button" value="SIP" class="buttons_s buttons_ei investment display align-items justify-items">
+                        <button type="button" value="SIP" class="buttons_s buttons_ei sip display align-items justify-items">
                             <i class="fa-solid fa-money-bill-trend-up"></i>
                             <p>SIP</p>
                         </button>
@@ -362,6 +362,38 @@
             <div class="save-cancel font display align-items">
                 <button class="cancel-b cancelie commonBtn">Cancel</button>
                 <button class="add-b addie commonBtn">Save Budget</button>
+            </div>
+        </div>
+    </main>
+    <main class="add-special-save-main add-expense-incomemain disable display align-items justify-items">
+        <div class="add-expense-page add-expense-income-page display justify-items">
+            <div class="upper-add-expense-income display">
+                <div class="add-expense-income-text font">
+                    <h1>New Saving</h1>
+                    <p>Log your special saving to keep track of your budget.</p>
+                </div>
+                <div class="close-expense">
+                    <button class="class-cancel-ss">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+            <form class="expense-form expense-income-form">
+                <div class="expense-value-input display align-items justify-items">
+                    <input type="number" name="" id="value-expense" class="special-saving-input display align-items justify-items" placeholder="₹0.00">
+                </div>
+                <div class="expense-merchant-input display font justify-items">
+                    <label for="merchant-expense">For</label>
+                    <input type="text" name="" id="merchant-expense" class="for-special-saving display align-items justify-items" placeholder="Saving for">
+                </div>
+                <div class="expense-description font display">
+                    <label for="textarea">Note (optional)</label>
+                    <textarea name="expense-description" id="expense-description" class="textarea-exp" placeholder="What was this for?"></textarea>
+                </div>
+            </form>
+            <div class="save-cancel font display align-items">
+                <button class="cancel-sspec cancelie commonBtn">Cancel</button>
+                <button class="add-sspec addie commonBtn">Save Expense</button>
             </div>
         </div>
     </main>
@@ -514,9 +546,21 @@
                 </button>
             </div>
         </div>
-        
+        <div class="add-special-saving">
+            <div class="special-saving-text">
+                <h2>Monthly Savings Goals</h2>
+                <p>Track your long-term ambitions and milestones.</p>
+            </div>
+            <div class="data-printing-special">
+
+            </div>
+            <div class="add-special-btn">
+                <button class="add-sp-Btn cancelie commonBtn">Add</button>
+            </div>
+        </div>
     </main>
-    
+    <script src="JS/special_saving_add_data.js"></script>
+    <script src="JS/special_saving_data_print.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="JS/script.js"></script> 
     <script src="Js/recent-transaction.js"></script>
@@ -532,5 +576,6 @@
     <script src="JS/budget-data-add.js"></script>
     <script src="JS/budget-print.js"></script>
     <script src="JS/recent-budget.js"></script>
+    
 </body>
 </html>
