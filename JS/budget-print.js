@@ -1,8 +1,15 @@
 // budget-print.js
+
+
+// naming components
 const adder = document.querySelector('.adder-budget-div');
 const budgetBtn = document.querySelector('.budget-btn'); 
 
+
+// prints in budget page under budget 
 function data_budget_pri(data) {
+
+    // clears the older savings to update them to new one's
     adder.innerHTML = ''; 
     adder.appendChild(budgetBtn);
 
@@ -15,7 +22,7 @@ function data_budget_pri(data) {
         const used = matchingExpenses.reduce((sum, exp) => sum + Number(exp.price || 0), 0);
         const goal = Number(item.goal);
         const remaining = goal - used;
-        const percentage = goal > 0 ? Math.min((used / goal) * 100, 100).toFixed(1) : 0;
+        const percentage = goal > 0 ? Math.min((used / goal) * 100, 100).toFixed(1) : 0; // calculate the percentage of money used out of the limit
 
         const card = document.createElement("div");
         card.classList.add("budget-div-adder");
@@ -56,6 +63,8 @@ function data_budget_pri(data) {
 
         const deleteButton = card.querySelector(".delete-button-budget");
 
+
+        // adding event listener to delete btn to delete a specific budget
         deleteButton.addEventListener("click", () => {
             const customID = item.id;
             clear_budget(customID);
@@ -68,6 +77,7 @@ function data_budget_pri(data) {
 }
 
 
+// deletes the specific budget 
 function clear_budget(idToDelete) {
 
     const delete_div = document.querySelector(`.${CSS.escape(idToDelete)}`);
@@ -86,6 +96,7 @@ function clear_budget(idToDelete) {
 }
 
 
+// decide the icon to be printed in budget according to the selection 
 function icon_decide(data) {
     switch (data) {
         case 'Dining': return 'fa-solid fa-utensils';

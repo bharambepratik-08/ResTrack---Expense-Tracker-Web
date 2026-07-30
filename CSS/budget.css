@@ -170,7 +170,7 @@
 
 /* dash */
 
-.budgets-table {
+.common-display-table {
     flex-direction: column;
     min-width: 350px;
     height: 100%;

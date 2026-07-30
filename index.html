@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FinTrack</title>
+    <title>ResTrack</title>
     <link rel="stylesheet" href="CSS/default.css">
     <link rel="stylesheet" href="CSS/dashboard.css">
     <link rel="stylesheet" href="CSS/transaction.css">
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
+    <!-- Navbar -->
     <header class="navBar-header">
         <div class="navBar display align-items">
             <div class="left-side display">
@@ -35,6 +36,7 @@
             </div>
         </div>
     </header>
+    <!-- Button section for adding expense, income & saving -->
     <main class="add-button">
         <div class="add-expense display align-items justify-items">
             <i class="fa-regular fa-plus"></i>
@@ -51,6 +53,7 @@
             </div>
         </div>
     </main>
+    <!-- Page for adding expense -->
     <main class="add-expense-main add-expense-incomemain disable display align-items justify-items">
         <div class="add-expense-page add-expense-income-page display justify-items">
             <div class="upper-add-expense-income display">
@@ -146,6 +149,7 @@
             </div>
         </div>
     </main>
+    <!-- Page for adding income -->
     <main class="add-income-main add-expense-incomemain display align-items justify-items disable">
         <div class="add-income-page display add-expense-income-page justify-items">
             <div class="upper-add-expense-income display">
@@ -225,6 +229,7 @@
             </div>
         </div>
     </main>
+    <!-- Page for adding saving -->
     <main class="add-saving-main add-expense-incomemain display align-items justify-items disable">
         <div class="add-saving-page display add-expense-income-page justify-items">
             <div class="upper-add-expense-income display">
@@ -248,23 +253,28 @@
                 </div>
                 <div class="cato-selection font">
                     <p>Select Category</p>
-                    <div class="grid-cato cato-s font print-special-saving">
-                        <button type="button" value="Saving" class="buttons_s buttons_ei saving display align-items justify-items">
-                            <i class="fa-solid fa-money-check-dollar"></i>
-                            <p>Saving</p>
-                        </button>
-                        <button type="button" value="Investment" class="buttons_s buttons_ei invetment display align-items justify-items">
-                            <i class="fa-solid fa-hand-holding-dollar"></i>
-                            <p>Investment</p>
-                        </button>
-                        <button type="button" value="SIP" class="buttons_s buttons_ei sip display align-items justify-items">
-                            <i class="fa-solid fa-money-bill-trend-up"></i>
-                            <p>SIP</p>
-                        </button>
-                        <button type="button" value="Other" class="buttons_s buttons_ei other display align-items justify-items">
-                            <i class="fa-solid fa-ellipsis"></i>
-                            <p>Other</p>
-                        </button>
+                    <div class="grid-cato display font cato-s print-special-saving display">
+                        <div class="buttons-saving cato-a cato-sspec-sav">
+                            <button type="button" value="Saving" class="buttons_s buttons_ei saving display align-items justify-items">
+                                <i class="fa-solid fa-money-check-dollar"></i>
+                                <p>Saving</p>
+                            </button>
+                            <button type="button" value="Investment" class="buttons_s buttons_ei invetment display align-items justify-items">
+                                <i class="fa-solid fa-hand-holding-dollar"></i>
+                                <p>Investment</p>
+                            </button>
+                            <button type="button" value="SIP" class="buttons_s buttons_ei sip display align-items justify-items">
+                                <i class="fa-solid fa-money-bill-trend-up"></i>
+                                <p>SIP</p>
+                            </button>
+                            <button type="button" value="Other" class="buttons_s buttons_ei other display align-items justify-items">
+                                <i class="fa-solid fa-ellipsis"></i>
+                                <p>Other</p>
+                            </button>
+                        </div>
+                        <div class="sspec-buttons display cato-b cato-sspec-sav">
+                            
+                        </div>
                     </div>
                 </div>
                 <div class="date-method-input display align-items font">
@@ -304,6 +314,7 @@
             </div>
         </div>
     </main>
+    <!-- Page for adding budget -->
     <main class="budget-form-add add-expense-incomemain display font align-items justify-items disable">
         <div class="budget-form add-expense-income-page">
             <div class="heading-budget display align-items upper-add-expense-income font">
@@ -338,7 +349,7 @@
                         </button>
                         <button type="button" value="Bills" class="buttons_b buttons_ei bills display align-items justify-items">
                             <i class="fa-solid fa-receipt"></i>
-                            <p>Biils</p>
+                            <p>Bills</p>
                         </button>
                         <button type="button" value="Health" class="buttons_b buttons_ei health display align-items justify-items">
                             <i class="fa-solid fa-stethoscope"></i>
@@ -365,6 +376,7 @@
             </div>
         </div>
     </main>
+    <!-- Page for adding special saving -->
     <main class="add-special-save-main add-expense-incomemain disable display align-items justify-items">
         <div class="add-expense-page add-expense-income-page display justify-items">
             <div class="upper-add-expense-income display">
@@ -397,11 +409,14 @@
             </div>
         </div>
     </main>
+    <!-- Dashboard -->
     <main class="dashboard display align-items justify-items">
+        <!-- Page-Heading -->
         <div class="dashboard-head">
             <h2>Good Morning, Alex</h2>
             <p>Here's what's happening with your finances today.</p>
         </div>
+        <!-- Expense/Saving/Income Information -->
         <div class="dashboard-box display">
             <div class="total-saving common-box-ana display">
                 <div class="icon-ana display align-items justify-items">
@@ -432,6 +447,7 @@
                 <h1 class="total-savings"></h1>
             </div>
         </div>
+        <!-- Recent Transaction -->
         <div class="recent-budget">
             <div id="recent-transactions-list">
                 <div class="recent-transaction display align-items justify-items">
@@ -439,6 +455,7 @@
                 </div>
             </div>
         </div>
+        <!-- Catogery chart/ Recent Budget/ Recent Special Saving -->
         <div class="budget-chart display justify-items">
             <div class="spending-container display align-items">
                 <div class="spending-chart-box display">
@@ -452,18 +469,26 @@
                     </div>
                 </div>
             </div>
-            <div class="budgets-table display">
+            <div class="budgets-table common-display-table display">
                 <div class="head-budget">
-                    <h2>Budgets</h2>
+                    <h2>Recent Budgets</h2>
+                </div>
+            </div>
+            <div class="sspec-table common-display-table display">
+                <div class="head-budget">
+                    <h2>Special Saving</h2>
                 </div>
             </div>
         </div>
     </main>
+    <!-- Transaction -->
     <main class="transaction disable display align-items font">
+        <!-- Page Heading -->
         <div class="transaction-head display justify-items">
             <h1>Transaction</h1>
             <p>Manage and track your financial activities across all linked accounts.</p>
         </div>
+        <!-- Transaction table -->
         <div class="transaction-info display justify-items">
             <div class="upper-transaction grid-prop display align-items ">
                 <h2>Date</h2>
@@ -482,11 +507,14 @@
             <button>Clear Data</button>
         </div>
     </main>
+    <!-- Analytics -->
     <main class="analytic disable display align-items font">
+        <!-- Page Heading -->
         <div class="analytic-head display justify-items">
             <h1>Performance Analytics</h1>
             <p>Visualize your financial health and spending patterns.</p>
         </div>
+        <!-- Expense/Saving/Income Analytics -->
         <div class="analytics-box display">
             <div class="total-saving common-box-ana display">
                 <div class="icon-ana display align-items justify-items">
@@ -518,9 +546,11 @@
                 <h1 class="daily-avg"></h1>
             </div>
         </div>
+        <!-- Chart (graph) -->
         <div class="monthly-chart">
             <canvas id="analyticsChart"></canvas>
         </div>
+        <!-- Breakdown in visual presentation -->
         <div class="breakdown">
             <h3>Category Breakdown</h3>
             <p>Where your money goes</p>
@@ -529,11 +559,14 @@
             </div>
         </div>
     </main>
+    <!-- Budget -->
     <main class="budget display align-items font disable justify-items">
+        <!-- Page heading -->
         <div class="budget-head">
             <h2>My Budgets</h2>
             <p>Organize your financial life with precision. Track your limits and optimize your spending habits in real-time.</p>
         </div>
+        <!-- Budget -->
         <div class="budget-items">
             <div class="adder-budget-div">
                 <button class="budget-btn">
@@ -546,6 +579,7 @@
                 </button>
             </div>
         </div>
+        <!-- Special Saving -->
         <div class="add-special-saving">
             <div class="special-saving-text">
                 <h2>Monthly Savings Goals</h2>
@@ -559,8 +593,12 @@
             </div>
         </div>
     </main>
+    <!-- Setting -->
+    <main class="setting display align-items font justify-items">
+    </main>
     <script src="JS/special_saving_add_data.js"></script>
     <script src="JS/special_saving_data_print.js"></script>
+    <script src="JS/sspec_printing_data-dash.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="JS/script.js"></script> 
     <script src="Js/recent-transaction.js"></script>

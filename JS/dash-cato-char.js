@@ -1,4 +1,6 @@
 // spending-chart.js
+
+// creates the chart on dashboard
 let spendingChart = null;
 
 function updateSpendingCategoryChart() {

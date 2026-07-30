@@ -1,5 +1,7 @@
 // cato_breakdown.js
 
+
+// create the breakdown part in analytics (accorrding to the expense made)
 function breakdown_co_si() {
     const divcard = document.querySelector(".cato-breakdown");
     if (!divcard) return;

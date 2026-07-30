@@ -396,15 +396,19 @@ body {
     }
 }
 
-.cato-s {
+.cato-sspec-sav {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 0.5rem;
+    margin-top: 0.7rem;
     gap: 0.8rem;
 }
 
+.cato-s {
+    flex-direction: column;
+}
+
 .buttons_s {
-    min-width: 23%;
+    min-width: 140px;
 }
 
 .save-cancel {
@@ -453,3 +457,8 @@ body {
     opacity: 1;
 }
 
+.sspec-buttons {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    max-width: 600px;
+}

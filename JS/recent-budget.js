@@ -38,7 +38,7 @@ function inner_budget(data) {
 }
 
 function print_recent_budget() {
-    recent_list_budget_cont.innerHTML = '<div class="head-budget"><h3>Recent Budget</h3></div>';
+    recent_list_budget_cont.innerHTML = '<div class="head-budget"><h2>Recent Budget</h2></div>';
     
     const start = budget_data.length - 1;
     const end = Math.max(0, budget_data.length - 5);

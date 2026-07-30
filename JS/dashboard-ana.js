@@ -1,3 +1,7 @@
+// dashboard-ana.js
+
+
+// naming the component 
 const total_balance = document.querySelector('.total-balance');
 const monthly_income = document.querySelector('.monthly-income');
 const monthly_expense = document.querySelector('.monthly-expense');
