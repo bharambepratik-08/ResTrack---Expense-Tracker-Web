@@ -1,8 +1,14 @@
+// analytics-sum.js
+
+
+// naming the component
 const net_saving = document.querySelector('.net-saving');
 const total_inflow = document.querySelector('.total-inflow');
 const monthly_spend = document.querySelector('.monthly-spend');
 const daily_avg = document.querySelector('.daily-avg');
 
+
+// calculates the daily avg and prints in analytics 
 function calculateDailyAvg () {
     const expense_dataa = expense_data.filter(
         item => item.act === "Expense"
@@ -22,6 +28,8 @@ function calculateDailyAvg () {
     daily_avg.innerHTML = `${daily_avg_no}`;
 }
 
+
+// calculates total saving and prints in analytics
 function calculateSavings() {
 
     const saving_data = expense_data.filter(
@@ -36,6 +44,8 @@ function calculateSavings() {
     net_saving.innerHTML = `${saving_no}`;
 }
 
+
+// calculates total expense and prints in analytics
 function calculateExpense() {
 
     const expense_dataa = expense_data.filter(
@@ -50,6 +60,8 @@ function calculateExpense() {
     monthly_spend.innerHTML = `${expense_no}`;
 }
 
+
+// calculates total income and prints in analytics 
 function calculateIncome() {
 
     const income_data = expense_data.filter(

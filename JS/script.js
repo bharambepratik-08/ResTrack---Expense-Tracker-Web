@@ -1,5 +1,5 @@
 // Making add expense/ cancel button work 
-
+// in development
 const plus_add = document.querySelector('.add-expense');
 const form_add_expense = document.querySelector('.add-expense-main');
 const form_add_income = document.querySelector('.add-income-main');
@@ -65,6 +65,9 @@ add_e.addEventListener("click", () => {
     form_add_expense.classList.add('able');
     header.classList.add("disable")
     transaction.classList.add("disable");
+    dashboard.classList.add("disable")
+    analytics.classList.add("disable")
+    budget.classList.add("disable")
     plus_add.classList.add("disable")
 
 })
@@ -75,6 +78,9 @@ add_i.addEventListener("click", () => {
     form_add_income.classList.add('able');
     header.classList.add("disable")
     transaction.classList.add("disable");
+    dashboard.classList.add("disable")
+    analytics.classList.add("disable")
+    budget.classList.add("disable")
     plus_add.classList.add("disable")
 
 })
@@ -85,6 +91,9 @@ add_b.addEventListener("click", () => {
     form_add_budget.classList.add('able');
     header.classList.add("disable")
     transaction.classList.add("disable");
+    dashboard.classList.add("disable")
+    analytics.classList.add("disable")
+    budget.classList.add("disable")
     plus_add.classList.add("disable")
 
 })
@@ -95,6 +104,9 @@ add_s.addEventListener("click", () => {
     form_add_saving.classList.add('able');
     header.classList.add("disable")
     transaction.classList.add("disable");
+    dashboard.classList.add("disable")
+    analytics.classList.add("disable")
+    budget.classList.add("disable")
     plus_add.classList.add("disable")
 
 })

@@ -1,5 +1,9 @@
+// sspec_printing_data_dash.js
+
 const recent_list_sspec_cont = document.querySelector(".sspec-table");
 
+
+// prints recently added special saving on dashboard
 function inner_sspec(data) {
     if (!data) return;
 
@@ -34,6 +38,8 @@ function inner_sspec(data) {
     recent_list_sspec_cont.appendChild(card);
 }
 
+
+// give the budget (recent - last 5) to inner_sspec to print
 function print_recent_sspec() {
     recent_list_sspec_cont.innerHTML = '<div class="head-budget"><h2>Recent Special Saving</h2></div>';
     

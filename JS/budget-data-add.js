@@ -1,8 +1,13 @@
 // budget-data-add.js
+
+
+// naming the component
 const final_b = document.querySelector('.add-b');
 const button_b = document.querySelectorAll('.buttons_b');
 let budget_data = JSON.parse(localStorage.getItem("myBudget")) || [];
 
+
+// adding event listener to buttons inorder to make them working
 button_b.forEach(button => {
     button.addEventListener("click", () => { 
         button_b.forEach(c => c.classList.remove("btnfocus", "cato_b"));
@@ -10,6 +15,8 @@ button_b.forEach(button => {
     });
 });
 
+
+// adds the data
 function budget_box_data() {
 
     const selectedBtn = document.querySelector('.cato_b');
@@ -34,6 +41,8 @@ function budget_box_data() {
     max_budget_input.value = ""; 
 }
 
+
+// adding event listener to the final_b btn to make the add budget btn working 
 final_b.addEventListener("click", () => {
     budget_box_data();
     data_budget_pri(budget_data);

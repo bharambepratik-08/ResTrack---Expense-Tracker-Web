@@ -1,7 +1,14 @@
+// print-transaction.js
+
+
 const transacbox = document.querySelector('.transaction-box-his');
 
+
+// prints all the transaction on transaction page
 function printing (data) {
 
+
+    // clear all the inner text/html so that there will be no over writting 
     transacbox.innerHTML = "";
     
     data.forEach(pack => {
@@ -35,6 +42,8 @@ function printing (data) {
 
         const deleteButton = card.querySelector(".clear_div");
 
+
+        // adding the event listener to the delete btn and giving the function that updates the website according to the transaction that's deleted
         deleteButton.addEventListener("click", () => {
             const customID = pack.id;
             clear_specific(customID);
@@ -57,6 +66,7 @@ function printing (data) {
 }
 
 
+// takes the id of the transaction and deletes that from local storage and then prints the updated transactions
 function clear_specific(idToDelete) {
 
     const delete_div = document.querySelector(`.${CSS.escape(idToDelete)}`);
@@ -75,6 +85,8 @@ function clear_specific(idToDelete) {
     printing(expense_data);
 }
 
+
+// decide the icon  badge for the transaction
 function merchant_detailing (data) {
     const cato_icon = data.catogery;
 
@@ -106,6 +118,8 @@ function merchant_detailing (data) {
     }
 }
 
+
+// decide the color of the text-price according to expense/income/saving
 function price_color(data) {
 const data_color = data.act;
 

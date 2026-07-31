@@ -1,9 +1,13 @@
-// Adding data for special saving 
+// special_saving_add_data.js
+
+
+// naming the component
 const final_sspec = document.querySelector('.add-sspec');
 let special_saving_data = JSON.parse(localStorage.getItem("mySaving")) || [];
-
 let Sspec_adding = JSON.parse(localStorage.getItem("mySspec")) || [];
 
+
+// adds the data
 function special_savings_data() {
     
     const special_saving_input = document.querySelector('.special-saving-input');

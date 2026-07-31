@@ -22,12 +22,10 @@ function updateAnalyticsChart() {
     data.forEach(item => {
         if (!item.date) return;
 
-        // Force the date to local time to prevent "timezone shifting"
         const [year, month, day] = item.date.split('-').map(Number);
         const itemDate = new Date(year, month - 1, day);
 
 
-        // Match against current month and year
         if (itemDate.getMonth() === currentMonth && itemDate.getFullYear() === currentYear) {
             const dayIndex = itemDate.getDate() - 1; 
             const amount = parseFloat(item.price) || 0;
