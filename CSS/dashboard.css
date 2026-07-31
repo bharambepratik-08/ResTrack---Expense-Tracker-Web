@@ -79,3 +79,9 @@
     text-align: center;
     pointer-events: none;
 }
+
+.navbar-Btn {
+    display: none;
+    visibility: none;
+    opacity: 0;
+}
