@@ -31,6 +31,7 @@ const budget = document.querySelector(".budget")
 const budget_b = document.querySelector(".Budgets")
 const add_b = document.querySelector('.budget-btn');
 
+
 transaction_b.addEventListener("click", () => {
     dashboard.classList.add("disable")
     transaction.classList.remove("disable")
@@ -240,3 +241,29 @@ themeBtn.addEventListener('click', () => {
         themeIcon.classList.replace('fa-sun', 'fa-moon');
     }
 });
+
+
+const respouiLogic = window.matchMedia('(min-width: 450px)');
+
+function showPage(activePage) {
+
+  [dashboard, transaction, analytics, budget].forEach(page => {
+    page.classList.add("disable");
+  });
+  
+
+  activePage.classList.remove("disable");
+
+  if (respouiLogic.matches) {
+    main_Navbar.style.display = 'none';
+    navBtn_respui.style.display = 'flex';
+  } else {
+    main_Navbar.style.display = ''; 
+    navBtn_respui.style.display = '';
+  }
+}
+
+transaction_b.addEventListener("click", () => showPage(transaction));
+dashboard_b.addEventListener("click", () => showPage(dashboard));
+analytics_b.addEventListener("click", () => showPage(analytics));
+budget_b.addEventListener("click", () => showPage(budget));

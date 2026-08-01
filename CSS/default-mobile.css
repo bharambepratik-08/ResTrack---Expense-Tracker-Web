@@ -73,12 +73,6 @@
         justify-content: space-between;
     }
 
-    .dashboard {
-        display: none;
-        visibility: none;
-        opacity: 0;
-    }
-
     .navBar-header {
         display: none;
         height: 100vh;
@@ -86,18 +80,20 @@
 
         .navBar {
             height: 100%;
-            width: 50%;
+            width: 70%;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             gap: 100px;
             border-top-right-radius: 16px;
             border-bottom-right-radius: 16px;
             margin: 0;
+        
 
             .left-side {
                 flex-direction: column;
                 margin: 0;
                 gap: 3rem;
+                padding: 40px 0 0 0;
 
                 .app-name {
                     display: flex;
@@ -116,11 +112,77 @@
             }
 
             .right-side {
+                padding: 0 0 40px 0 ;
                 justify-content: center;
                 margin: 0;
                 flex-direction: column;
                 gap: 1rem;
             }
+        }
+    }
+
+
+    .dashboard {
+        padding: 18px;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+
+
+        .dashboard-head {
+
+            h2 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+
+        .dashboard-box {
+            flex-direction: column;
+            gap: 12px;
+            min-width: 100% !important;
+            width: 100%;
+            margin: 20px 0;
+
+            .common-box-ana {
+                max-width: 300px;
+                padding: 12px;
+            }
+        }
+
+        .recent-budget, 
+        .budget-chart, 
+        .breakdown,
+        .add-special-saving,
+        .spending-container {
+            width: 100% !important; 
+            max-width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            box-sizing: border-box;
+        }
+
+        .common-box-ana {
+            min-width: 100% !important; 
+        }
+
+
+        .budget-chart {
+            flex-direction: column;
+
+            .spending-container {
+                max-width: 360px;
+            }
+
+            .common-display-table {
+                max-width: 360px;
+                padding: 12px 18px 18px;
+                min-width: 360px;
+            }
+
         }
     }
 
