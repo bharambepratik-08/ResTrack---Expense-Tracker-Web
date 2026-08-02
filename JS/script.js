@@ -30,6 +30,8 @@ const analytics = document.querySelector(".analytic")
 const budget = document.querySelector(".budget")
 const budget_b = document.querySelector(".Budgets")
 const add_b = document.querySelector('.budget-btn');
+const setting_b = document.querySelector('.Setting');
+const setting = document.querySelector('.setting');
 
 
 transaction_b.addEventListener("click", () => {
@@ -44,6 +46,7 @@ dashboard_b.addEventListener("click", () => {
     transaction.classList.add("disable")
     analytics.classList.add("disable")
     budget.classList.add("disable")
+    setting.classList.add("disable")
 })
 
 analytics_b.addEventListener("click", () => {
@@ -51,6 +54,7 @@ analytics_b.addEventListener("click", () => {
     transaction.classList.add("disable");
     analytics.classList.remove("disable");
     budget.classList.add("disable")
+    setting.classList.add("disable")
 });
 
 budget_b.addEventListener("click", () => {
@@ -58,6 +62,15 @@ budget_b.addEventListener("click", () => {
     transaction.classList.add("disable");
     analytics.classList.add("disable");
     budget.classList.remove("disable")
+    setting.classList.add("disable")
+});
+
+setting_b.addEventListener("click", () => {
+    dashboard.classList.add("disable");
+    transaction.classList.add("disable");
+    analytics.classList.add("disable");
+    budget.classList.add("disable")
+    setting.classList.remove("disable")
 });
 
 add_e.addEventListener("click", () => {

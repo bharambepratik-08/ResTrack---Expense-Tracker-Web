@@ -121,69 +121,45 @@
         }
     }
 
-
-    .dashboard {
+    .dashboard,
+    .transaction {
         padding: 18px;
         align-items: center;
         width: 100%;
         box-sizing: border-box;
+    }
 
+    .dashboard-box {
+        margin: 18px 0 12px 0;
+        flex-direction: column;
+        min-width: 0;
+        width: 100% !important;
+    }
 
-        .dashboard-head {
+    .recent-budget {
+        margin: 18px 0 12px 0;
+        min-width: 310px;
+    }
 
-            h2 {
-                font-size: 20px;
-            }
+    .budget-chart {
+        margin: 18px 0 12px 0;
+        flex-direction: column;
+        width: 100% !important;
+    }
 
-            p {
-                font-size: 14px;
-            }
-        }
+    .common-display-table {
+        margin: 0;
+        padding: 24px;
+        min-width: 0;
+    }
 
-        .dashboard-box {
-            flex-direction: column;
-            gap: 12px;
-            min-width: 100% !important;
-            width: 100%;
-            margin: 20px 0;
-
-            .common-box-ana {
-                max-width: 300px;
-                padding: 12px;
-            }
-        }
-
-        .recent-budget, 
-        .budget-chart, 
-        .breakdown,
-        .add-special-saving,
-        .spending-container {
-            width: 100% !important; 
-            max-width: 100%;
-            margin-left: 0;
-            margin-right: 0;
-            box-sizing: border-box;
-        }
-
-        .common-box-ana {
-            min-width: 100% !important; 
-        }
-
-
-        .budget-chart {
-            flex-direction: column;
-
-            .spending-container {
-                max-width: 360px;
-            }
-
-            .common-display-table {
-                max-width: 360px;
-                padding: 12px 18px 18px;
-                min-width: 360px;
-            }
-
+    .head-budget {
+        h2 {
+            font-size: 18px;
         }
     }
 
+    .transaction-info {
+        width: 100%;
+    }
 }
