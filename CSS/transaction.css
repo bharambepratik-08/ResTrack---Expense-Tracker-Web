@@ -147,3 +147,14 @@
         cursor: pointer;
     }
 }
+
+.respo-printing-transac {
+    flex-direction: column;
+    background-color: var(--card-bg);
+    padding: 24px;
+    border-radius: 16px;
+    width: 100% !important;
+    height: auto;
+    align-items: start;
+    gap: 12px;
+}

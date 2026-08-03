@@ -122,14 +122,18 @@
     }
 
     .dashboard,
-    .transaction {
+    .transaction,
+    .analytics,
+    .budget {
         padding: 18px;
         align-items: center;
         width: 100%;
         box-sizing: border-box;
     }
 
-    .dashboard-box {
+    .dashboard-box,
+    .analytics-box {
+        gap: 30px;
         margin: 18px 0 12px 0;
         flex-direction: column;
         min-width: 0;
@@ -148,6 +152,7 @@
     }
 
     .common-display-table {
+        border-radius: 16px;
         margin: 0;
         padding: 24px;
         min-width: 0;
@@ -161,5 +166,27 @@
 
     .transaction-info {
         width: 100%;
+    }
+
+    .monthly-chart {
+        width: 100%;
+        height: 200px;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .budget-maker,
+    .add-btn-b {
+        height: 185px;
+    }
+
+    .add-special-saving {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .spending-chart-box {
+        border-radius: 16px;
     }
 }

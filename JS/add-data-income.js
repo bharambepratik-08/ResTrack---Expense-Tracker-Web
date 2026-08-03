@@ -64,7 +64,11 @@ const final_i = document.querySelector('.add-i');
 final_i.addEventListener("click", () => {
     // functions changing the information in the arrays and the website 
     add_data_i(); // adds data
-    printing(expense_data); // prints the data
+    if (respouiLogic.matches) {
+        printing_respo_ui(expense_data);
+    } else {
+        printing(expense_data);
+    }
     calculateIncome(); // calculates the income for analytics
     dash_income(); // calculates the income for dashboard
     dash_total_balance(); // calculates the total for dashboard

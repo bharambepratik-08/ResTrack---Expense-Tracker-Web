@@ -125,7 +125,7 @@
 
 .adder-budget-div {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap-reverse; 
     gap: 24px;
     justify-content: flex-start; 
     align-items: flex-start;
