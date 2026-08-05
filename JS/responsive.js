@@ -27,12 +27,18 @@ function showPage(activePage) {
   }
 }
 
-transaction_b.addEventListener("click", () => showPage(transaction));
-dashboard_b.addEventListener("click", () => showPage(dashboard));
-analytics_b.addEventListener("click", () => showPage(analytics));
-budget_b.addEventListener("click", () => showPage(budget));
+
+function respo_taskbar() {
+    if (!respouiLogic.matches) {
+      transaction_b.addEventListener("click", () => showPage(transaction));
+      dashboard_b.addEventListener("click", () => showPage(dashboard));
+      analytics_b.addEventListener("click", () => showPage(analytics));
+      budget_b.addEventListener("click", () => showPage(budget));
+    }
+}
 
 
 respouiLogic.addEventListener('change', () => {
     printing(expense_data);
+    respo_taskbar();
 });

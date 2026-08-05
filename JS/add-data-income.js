@@ -65,6 +65,7 @@ final_i.addEventListener("click", () => {
     // functions changing the information in the arrays and the website 
     add_data_i(); // adds data
     printing(expense_data); // prints the updated transactions
+    run_msg("Income added successfully!") // runs the notification function
     calculateIncome(); // calculates the income for analytics
     dash_income(); // calculates the income for dashboard
     dash_total_balance(); // calculates the total for dashboard

@@ -4,7 +4,8 @@
 }
 
 .dashboard-box {
-    gap: 36px;
+    width: 100% !important;
+    gap: 30px;
     min-width: 480px;
     margin: 36px 12px 12px 12px;
 }

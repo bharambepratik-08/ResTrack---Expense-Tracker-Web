@@ -72,6 +72,7 @@ final_e.addEventListener("click", () => {
     updateSpendingCategoryChart() // updates the chart on dashboard
     data_budget_pri(budget_data); // updates the budget according to the added expense 
     print_recent_budget(); // prints the updated budget info on dashboard
+    run_msg("Expense added successfully!") // runs the notification function
 
     // Clear Inputs
     merchant_e.value = ""; 
@@ -96,6 +97,7 @@ clear.addEventListener("click", () => {
     expense_data.length = 0,
     budget_data.length = 0,
     printing(expense_data)
+    run_msg("All data cleared successfully!")
     data_budget_pri();
     updateAnalyticsChart();
     calculateExpense()

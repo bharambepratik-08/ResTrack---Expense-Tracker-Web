@@ -46,6 +46,7 @@ function budget_box_data() {
 final_b.addEventListener("click", () => {
     budget_box_data();
     data_budget_pri(budget_data);
+    run_msg("Budget added successfully!") // runs the notification function
 
     form_add_budget.classList.remove("able");
     form_add_budget.classList.add("disable");

@@ -27,6 +27,7 @@ function special_savings_data() {
 final_sspec.addEventListener("click", () => {
     special_savings_data();
     special_data_printing(special_saving_data);
+    run_msg("Special saving added successfully!") // runs the notification function
 
     form_add_special_saving.classList.remove("able");
     form_add_special_saving.classList.add("disable");
