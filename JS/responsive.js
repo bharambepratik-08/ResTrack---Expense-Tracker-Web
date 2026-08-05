@@ -33,4 +33,6 @@ analytics_b.addEventListener("click", () => showPage(analytics));
 budget_b.addEventListener("click", () => showPage(budget));
 
 
-
+respouiLogic.addEventListener('change', () => {
+    printing(expense_data);
+});

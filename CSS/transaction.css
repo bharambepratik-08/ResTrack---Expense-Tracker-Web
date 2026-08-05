@@ -99,20 +99,6 @@
     .button_div {
         
         padding: 16px 24px ;
-
-        .clear_div {
-            outline: none;
-            border: none;
-            height: 20px;
-            width: 20px;
-            font-size: 16px;
-            background-color: transparent;
-            color: #BA1A1A;
-        }
-
-        .clear_div:hover {
-            cursor: pointer;
-        }
     }
 
     .price_div {
@@ -153,8 +139,46 @@
     background-color: var(--card-bg);
     padding: 24px;
     border-radius: 16px;
-    width: 100% !important;
     height: auto;
     align-items: start;
     gap: 12px;
+}
+
+
+.common_div_ui {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.transaction-box-his-respoui {
+    flex-direction: column;
+    width: 100%;
+}
+
+.clear_div_BTN {
+    outline: none;
+    border: none;
+    height: 20px;
+    width: 20px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #BA1A1A;
+}
+
+.clear_div_BTN:hover {
+    cursor: pointer;
+}
+
+#iconic-merchant {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    width: 36px;
+    border-radius: 8px;
+    background-color: var(--bg-color);
+}
+
+.one_work_trasac {
+    gap: 8px;
 }

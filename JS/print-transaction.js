@@ -5,7 +5,7 @@ const transacbox = document.querySelector('.transaction-box-his');
 
 
 // prints all the transaction on transaction page
-function printing (data) {
+function printing_ui (data) {
 
 
     // clear all the inner text/html so that there will be no over writting 
@@ -36,7 +36,7 @@ function printing (data) {
             <h3 class="display-type display align-items justify-items">Completed</h3>
             <h3 class="price_div ${price_color(pack)} display align-items justify-items">${price_details}</h3>
             <div class="button_div display align-items justify-items">
-                <button class="clear_div"><i class="fa-regular fa-trash-can"></i></button>
+                <button class="clear_div clear_div_BTN"><i class="fa-regular fa-trash-can"></i></button>
             </div>
         `;
 
@@ -73,7 +73,6 @@ const transabox_his_respoui = document.querySelector('.transaction-box-his-respo
 function printing_respo_ui (data) {
 
     // clear all the inner text/html so that there will be no over writting 
-    transaction_main_box_respoui.innerHTML = "";
     transabox_his_respoui.innerHTML = "";
     
     data.forEach(pack => {
@@ -92,17 +91,26 @@ function printing_respo_ui (data) {
 
         card.innerHTML = `
             <div class="respo-printing-transac display font">
-                <h3 class="date_div_respotrans">Date: ${date_details}</h3>
-                <div class="iconic_respotrans display align-items">
-                    <i class="${merchant_detailing(pack)}" id="iconic-merchant"></i>
-                    <h3 class="merchant_div_respotrans">Merchant:${merchant_details}</h3>
+                <h3 class="date_div_respotrans">${date_details}</h3>
+                <div class="iconic_respotrans display common_div_ui align-items">
+                    <div class="one_work_trasac display align-items">
+                        <i class="${merchant_detailing(pack)}" id="iconic-merchant"></i>
+                        <h3 class="merchant_div_respotrans">${merchant_details}</h3>
+                    </div>
+                    <div class="two_work_trasac">
+                        <h3 class="cato_div_respotrans">${cato_details}</h3>
+                    </div>
                 </div>
-                <h3 class="cato_div_respotrans">Category: ${cato_details}</h3>
-                <h3 class="act_div_respotrans">Type: ${act}</h3>
-                <h3 class="display-type_respotrans">Status: Completed</h3>
-                <h3 class="price_div_respotrans ${price_color(pack)}">Amount: ${price_details}</h3>
-                <div class="button_div_respotrans display align-items justify-items">
-                    <button class="clear_div_respotrans"><i class="fa-regular fa-trash-can"></i></button>
+                <div class="midd_transac_div display align-items common_div_ui">
+                    <h3 class="act_div_respotrans">${act}</h3>
+                    <h3 class="display-type_respotrans">Completed</h3>
+                </div>
+                
+                <div class="lower_btn_price display align-items common_div_ui">
+                    <h3 class="price_div_respotrans ${price_color(pack)}">Amount: ${price_details}</h3>
+                    <div class="button_div_respotrans display align-items justify-items">
+                        <button class="clear_div_BTN clear_div_respotrans"><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
                 </div>
             </div>
         `;
@@ -128,7 +136,7 @@ function printing_respo_ui (data) {
             updateSpendingCategoryChart()
         });
 
-        transacbox.appendChild(card);
+        transabox_his_respoui.appendChild(card);
     });
 }
 
@@ -149,18 +157,8 @@ function clear_specific(idToDelete) {
         JSON.stringify(expense_data)
     );
 
-    if (respouiLogic.matches) {
-        printing_respo_ui(expense_data);
-    } else {
-        printing(expense_data);
-    }
+    printing(expense_data);
 }
-
-// if (respouiLogic.matches) {
-//     printing_respo_ui(expense_data);
-// } else {
-//     printing(expense_data);
-// }
 
 
 // decide the icon  badge for the transaction
@@ -212,8 +210,24 @@ switch (data_color) {
 }
 
 
-if (respouiLogic.matches) {
-    printing_respo_ui(expense_data);
-} else {
-    printing(expense_data);
+function printing(data) {
+    const desktopTable = document.querySelector('.transaction-info');
+    const mobileList = document.querySelector('.transaction-box-his-respoui');
+
+    if (!respouiLogic.matches) {
+        // MOBILE MODE: Hide desktop table, show mobile cards
+        if(desktopTable) desktopTable.style.display = 'none';
+        if(mobileList) mobileList.style.display = 'block';
+        printing_respo_ui(data);
+    } else {
+        // DESKTOP MODE: Show desktop table, hide mobile cards
+        if(desktopTable) desktopTable.style.display = 'block';
+        if(mobileList) mobileList.style.display = 'none';
+        printing_ui(data);
+    }
 }
+
+
+window.addEventListener('resize', () => {
+    printing(expense_data);
+});

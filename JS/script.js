@@ -236,6 +236,7 @@ document.addEventListener("DOMContentLoaded", () => {
     dash_saving()
     dash_total_balance()
     updateAnalyticsChart();
+    printing(expense_data);
 
     if (budget_data.length > 0) {
         data_budget_pri(budget_data);

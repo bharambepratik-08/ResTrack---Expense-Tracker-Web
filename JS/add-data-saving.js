@@ -71,11 +71,7 @@ const final_s = document.querySelector('.add-s');
 final_s.addEventListener("click", () => {
     // functions changing the information in the arrays and the website
     add_data_s(); // adds data
-    if (respouiLogic.matches) {
-        printing_respo_ui(expense_data);
-    } else {
-        printing(expense_data);
-    }
+    printing(expense_data); // prints the updated transactions
     calculateSavings(); // calculates the saving for analytics
     calculateDailyAvg(); // calculates the daily avg for analytics
     dash_saving() // calculates the saving for dashboard
