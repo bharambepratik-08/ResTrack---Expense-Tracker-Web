@@ -189,4 +189,9 @@
     .spending-chart-box {
         border-radius: 16px;
     }
+
+    .budget-items {
+        display: flex;
+        justify-content: center;
+    }
 }
