@@ -7,6 +7,13 @@ navbar_bnt.addEventListener("click", () => {
     main_Navbar.style.display = 'flex'
 })
 
+navbar_bnt.addEventListener("click", () => {
+  main_Navbar.classList.remove("disable");
+  [dashboard, transaction, analytics, budget].forEach(page => {
+    page.classList.add("disable");
+  });
+})
+
 const respouiLogic = window.matchMedia('(min-width: 450px)');
 
 function showPage(activePage) {
@@ -18,6 +25,8 @@ function showPage(activePage) {
 
   activePage.classList.remove("disable");
 
+  main_Navbar.classList.add('disable')
+
   if (respouiLogic.matches) {
     main_Navbar.style.display = 'none';
     navBtn_respui.style.display = 'flex';
@@ -28,17 +37,15 @@ function showPage(activePage) {
 }
 
 
-function respo_taskbar() {
-    if (!respouiLogic.matches) {
-      transaction_b.addEventListener("click", () => showPage(transaction));
-      dashboard_b.addEventListener("click", () => showPage(dashboard));
-      analytics_b.addEventListener("click", () => showPage(analytics));
-      budget_b.addEventListener("click", () => showPage(budget));
-    }
+if (!respouiLogic.matches) {
+  transaction_b.addEventListener("click", () => showPage(transaction));
+  dashboard_b.addEventListener("click", () => showPage(dashboard));
+  analytics_b.addEventListener("click", () => showPage(analytics));
+  budget_b.addEventListener("click", () => showPage(budget));
 }
+
 
 
 respouiLogic.addEventListener('change', () => {
     printing(expense_data);
-    respo_taskbar();
 });

@@ -13,7 +13,7 @@
 
     .transaction-info {
         border-radius: 16px;
-        border: 2px rgba(3, 100, 0, 0.253) solid;
+        border: 1px solid var(--border-color);
         min-width: auto;
         flex-direction: column;
 
@@ -45,6 +45,12 @@
 .transaction-history {
     text-align: center;
     border-top: 1px #949494a4 solid;
+    color: var(--primary);
+    background-color: var(--border-color);
+    background-color: transparent !important; /* Let the container handle background */
+    border-top: 1px solid var(--border-color) !important;
+    color: var(--text-main);
+
 
     .date_div {
         font-size: 14px;
@@ -70,9 +76,9 @@
         }
 
         .merchant_div {
-            color: rgb(25, 28, 30);
             font-size: 16px;
             font-weight: 500;
+            color: var(--text-main);
         }
     }
 
@@ -92,7 +98,7 @@
     .display-type {
         font-size: 12px;
         font-weight: 500;
-        color: rgb(0, 75, 30);
+        color: var(--income);
         padding: 16px 24px;
     }
 
@@ -106,6 +112,9 @@
         font-weight: 600;
         padding: 16px 24px;
     }
+
+    .price_div.green { color: var(--income) !important; }
+    .price_div.red { color: var(--expense) !important; }
 }
 
 .red {
@@ -117,6 +126,8 @@
 }
 
 .clear_data {
+    color : var(--expense);
+
     button {
             height: 40px;
             width: 100px;
@@ -181,4 +192,32 @@
 
 .one_work_trasac {
     gap: 8px;
+}
+
+.upper-transaction {
+    background-color: var(--card-bg) !important;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.transaction-history {
+    border-top: 1px solid var(--border-color) !important;
+    transition: background 0.2s;
+}
+
+.transaction-history:hover {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+
+.date_div { color: var(--text-muted) !important; }
+.merchant_div { color: var(--text-main) !important; }
+
+/* The delete icon */
+.clear_div_BTN {
+    color: var(--text-muted);
+    transition: color 0.2s;
+}
+
+.clear_div_BTN:hover {
+    color: var(--expense);
 }

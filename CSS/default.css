@@ -5,34 +5,42 @@
 }
 
 :root {
-    --bg-color: #0B1220;
-    --nav-bg: #131C31;
-    --text-color: #ffffff;
-    --card-bg: #0a0e18;
-    --border-color: #131C31;
-    --input-bg: #ffffff;
-    --bud-bg: #131C31;
-    --bud-bgh: #131C31;
-    --bud-bght: #2a2e38;
+    /* Dark Mode (Default) */
+    --bg-color: #0f172a;           
+    --nav-bg: rgba(30, 41, 59, 0.7); 
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --card-bg: #1e293b;
+    --border-color: #334155;
+
+    --calendar-invert: 1; /* Inverts calendar icon for dark mode */
+    
+    /* Semantic Colors */
+    --primary: #6366f1;            
+    --income: #10b981;             
+    --expense: #ef4444;            
+    --saving: #3b82f6;             
+    --accent: #f59e0b;             
+    
+    --glass-border: rgba(255, 255, 255, 0.1);
 }
 
-
 .light-mode {
-    --bg-color: #F8FAFC;
-    --nav-bg: #ffffff;
-    --text-color: #0f172a;
+    --bg-color: #f1f5f9;
+    --nav-bg: rgba(255, 255, 255, 0.8);
+    --text-main: #0f172a;
+    --text-muted: #64748b;
     --card-bg: #ffffff;
     --border-color: #e2e8f0;
-    --input-bg: #f1f5f9;
-    --bud-bg: rgb(188 203 185 / 0.5);
-    --bud-bgh: #16a34a;
-    --bud-bght: #006e2f;
+    --glass-border: rgba(0, 0, 0, 0.05);
+    --calendar-invert: 0; /* Normal calendar icon for light mode */
 }
 
 body {
     background: var(--bg-color);
-    color: var(--text-color);
-    transition: background 0.3s, color 0.3s; 
+    color: var(--text-main);
+    line-height: 1.6;
+    transition: all 0.3s ease;
 }
 
 .navBar {
@@ -95,7 +103,8 @@ body {
 }
 
 .navBar-text:hover {
-    color: #006e2f;
+    color: var(--primary); 
+    transform: scale(1.05);
     font-weight: 500;
     transform: scale(1.05);
     transition: 0.3s;
@@ -153,23 +162,34 @@ body {
     bottom: 2rem;
     right: 2rem;
     font-size: 2rem;
-    background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%);
+    background: var(--primary);
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
     border-radius: 50%;
     height: 4rem;
     width: 4rem;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
 }
+
 
 .add-expense-incomemain {
-    height: 100vmin;
+    height: 100vh;
     width: 100%;
-    background-color: rgb(25 28 30 / 0.2);
+    background-color: rgba(0, 0, 0, 0.7); 
+    backdrop-filter: blur(4px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
 }
-
 .add-expense-income-page {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
+    background: var(--card-bg) !important;
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
     min-width: 600px;
     border-radius: 24px;
+    padding: 20px;
     flex-direction: column;
 }
 
@@ -194,11 +214,16 @@ body {
     }
 }
 
-.add-expense-income-text  {
-    p {
-        color: rgb(82, 83, 83);
-        font-weight: 500;
-    }
+.add-expense-income-text h1 { color: var(--text-main); }
+.add-expense-income-text p { color: var(--text-muted); }
+
+.expense-merchant-input #merchant-expense, 
+.date-value-icon, 
+.payment-type-icon, 
+textarea {
+    background-color: var(--bg-color) !important;
+    color: var(--text-main) !important;
+    border: 1px solid var(--border-color) !important;
 }
 
 .expense-income-form {
@@ -240,17 +265,19 @@ body {
         gap: 8px;
 
         #merchant-expense {
-            padding: 12px;
             font-size: 12px;
             font-weight: 500;
             border: none;
-            background-color: #fff;
             min-width: 100px;
             max-width: 50%;
-            color: #202020;
             outline: none;
             border-radius: 12px;
             height: 20px;
+            background-color: var(--bg-color) !important; 
+            color: var(--text-main) !important;
+            border: 1px solid var(--border-color) !important;
+            padding: 12px;
+            border-radius: 12px;
         }
 
         label {
@@ -308,23 +335,35 @@ body {
 
             .date-value-icon,
             .payment-type-icon {
-                background-color: #fff;
+                background-color: var(--bg-color) !important;
+                color: var(--text-main) !important;
+                border: 1px solid var(--border-color) !important;
                 border-radius: 12px;
+                display: flex;
+                align-items: center;
 
                 i {
                     padding: 12px;
-                    color: #6d6d6d;
                 }
+
+            }
+
+            .date-value-icon i,
+            .payment-type-icon i {
+                padding: 12px;
+                color: var(--primary);
             }
         }
         
         .insel {
             padding: 16px 16px 16px 0px;
-            outline: none;
-            border: none;
             box-sizing: border-box;
             border-radius: 12px;
-            color: #6d6d6d;
+            background-color: transparent !important;
+            color: var(--text-main) !important;
+            border: none !important;
+            outline: none !important;
+            width: 100%;
         }
     }
 
@@ -349,32 +388,64 @@ body {
     }
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(var(--calendar-invert, 1)); /* Inverts icon for dark mode */
+}
+
 .buttons_ei {
     outline: none;
-    background-color: #fff;
     border: none;
     border-radius: 16px;
     padding: 16px;
     gap: 5px;
     flex-direction: column;
+    background: var(--border-color) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-main) !important;
+    transition: all 0.3s ease;
 
     i {
         font-size: 24px;
-        color: #6d6d6d;
+        color: var(--primary);
     }
 
     p {
         font-size: 16px;
-        color: #6d6d6d;
+        font-weight: 500;
+        color: var(--text-main);
     }
 
 }
 
+
+.buttons_ei.btnfocus {
+    background: var(--primary) !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+}
+
+.buttons_ei.btnfocus i, .buttons_ei.btnfocus p {
+    color: white !important;
+}
+
 .buttons_ei:hover {
     cursor: pointer;
+    color: var(--primary);
+    background: var(--primary) !important;
     transform: translateY(-3px);
-    transition: 0.3s;
 }
+
+.buttons_ei.btnfocus i, 
+.buttons_ei.btnfocus p {
+    color: white !important;
+}
+
+
+.buttons_ei:hover i, 
+.buttons_ei:hover p {
+    color: white !important;
+}
+
 
 .buttons:hover {
     background-color: #f0fdf4;
@@ -387,13 +458,13 @@ body {
     }
 }
 
+
 .btnfocus {
-    background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%);
-    
-    i,
-    p {
-        color: #fff;
-    }
+    background: linear-gradient(135deg, var(--primary) 0%, var(--saving) 100%) !important;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+.btnfocus i, .btnfocus p {
+    color: white !important;
 }
 
 .cato-sspec-sav {
@@ -430,19 +501,29 @@ body {
     cursor: pointer;
 }
 
+
 .addie {
-    background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%);
-    box-shadow: 0 10px 15px -3px rgba(34, 197, 94, 0.2);
-    font-size: 16px;
-    padding: 12px 36px;
-    color: #fff;
+    background: linear-gradient(135deg, var(--primary) 0%, #4f46e5 100%);
+    box-shadow: 0 4px 14px 0 rgba(99, 102, 241, 0.39);
+    border: none;
+    color: white;
+    padding: 12px 24px;
     font-weight: 600;
+    border-radius: 12px;
 }
+
+.addie:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+}
+
 
 .cancelie {
     padding: 12px 24px;
     background-color: transparent;
     font-size: 14px;
+    color: var(--text-muted);
+    font-weight: 500;
 }
 
 .disable {
@@ -484,4 +565,17 @@ body {
     align-items: center;
     gap: 12px;
     z-index: 10000;
+}
+
+.common-box-ana, .recent-budget, .spending-chart-box, .budget-maker, .special-saving-print-box {
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.common-box-ana:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
 }

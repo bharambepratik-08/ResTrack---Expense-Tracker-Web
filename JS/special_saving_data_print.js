@@ -37,7 +37,7 @@ function special_data_printing (item) {
                     <h3>${used} / ${goal}</h3>
                 </div> 
                 <div class="bar-sspec">
-                    <div style="width: ${per_data}%; background: ${per_data > 90 ? '#106b32' : '#22c55e'}; height: 100%;"></div>
+                    <div style="width: ${per_data}%; background: ${per_data > 90 ? 'var(--expense)' : 'var(--income)'} height: 100%;"></div>
                 </div>
                 <div class="per-sspec display ">
                     <h4>${per_data} %</h4>

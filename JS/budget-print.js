@@ -48,7 +48,7 @@ function data_budget_pri(data) {
                     </div>
                     <div class="goal-bar pad-com">
                         <div class="bar-div">
-                            <div style="width: ${percentage}%; background: ${percentage > 90 ? '#ff4d4d' : '#22c55e'}; height: 100%;"></div>
+                            <div style="width: ${percentage}%; background: ${percentage > 90 ? 'var(--expense)' : 'var(--income)'}; height: 100%;"></div>
                         </div>
                     </div>
                     <div class="rem pad-com display align-items">

@@ -21,17 +21,17 @@
     height: 250px;
     width: 250px;
     border-radius: 16px;
-    border: 2px var(--bud-bg) dashed;
+    border: 2px var(--border-color) dashed;
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
 
     .plus-icon {
-        background-color: var(--bud-bg);
+        background-color: var(--border-color); 
+        color: var(--text-main);
         height: 40px;
         width: 40px;
         border-radius: 50%;
-        color: var(--text-color);
         font-size: 24px;
         transition-property: all;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -57,10 +57,10 @@
 }
 
 .add-btn-b:hover {
-    border-color: var(--bud-bgh);
     color: var(--bud-bght);
-    background: rgb(0 110 47 / 0.05);
     cursor: pointer;
+    background: rgba(99, 102, 241, 0.05); 
+    border-color: var(--primary);
 
     .plus-icon {
         background-color: var(--bud-bgh);
@@ -150,8 +150,8 @@
     border-radius: 2px;
     height: 18px;
     font-size: 16px;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: var(--border-color);
+    color: var(--text-muted);
     visibility: none;
     opacity: 0;
 }
@@ -224,7 +224,7 @@
         margin: 12px 0 0 0;
         
         .add-sp-Btn {
-            background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%);
+            background: var(--primary);
             color: #fff;
         }
     }
@@ -259,8 +259,8 @@
     border-radius: 2px;
     height: 18px;
     font-size: 16px;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: var(--border-color);
+    color: var(--text-muted);
     visibility: none;
     opacity: 0;
 }
@@ -275,3 +275,13 @@
         cursor: pointer;
     }
 }
+
+.bar-div {
+    background: var(--border-color); /* The track */
+    height: 10px;
+    border-radius: 20px;
+}
+
+.progress-safe { background: linear-gradient(90deg, #10b981, #34d399); }
+
+.progress-danger { background: linear-gradient(90deg, #ef4444, #f87171); }

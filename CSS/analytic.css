@@ -6,9 +6,8 @@
     .analytic-head{
         flex-direction: column;
 
-        p {
-            color: #6d6d6d;
-        }
+            .analytic-head h2 { color: var(--text-main); }
+            .analytic-head p { color: var(--text-muted); }
     }
 }
 
@@ -17,12 +16,13 @@
     min-width: 480px;
 }
 
+
 .icon-ana {
     height: 46px;
     width: 46px;
-    color: var(--text-color);
     border-radius: 12px;
-    background: var(--bg-color);
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--primary);
 
     i {
         height: 24px;
@@ -38,7 +38,7 @@
     flex-direction: column;
     border-radius: 16px;
     background-color: var(--card-bg);
-    color: #6d6d6d;
+    color: var(--text-main);
     padding: 24px;
     min-width: 250px
 }
@@ -87,22 +87,6 @@
     margin-top: 10px;
 }
 
-.housing-div { 
-    background-color: #059669; 
-}
-
-.dining-div { 
-    background-color: #EA580C;
-}
-
-.shopping-div { 
-    background-color: #2563EB; 
-}
-  
-.transport-div { 
-    background-color: #7C3AED; 
-}
-
 .bills-div { 
     background-color: #DB2777; 
 }
@@ -118,6 +102,11 @@
 .other-div { 
     background-color: #4B5563; 
 } 
+
+.housing-div { background: #059669; }
+.dining-div { background: #f97316; }   
+.shopping-div { background: #3b82f6; } 
+.transport-div { background: #8b5cf6; } 
 
 .breakdown {
     background-color: var(--card-bg);

@@ -50,8 +50,8 @@ function updateAnalyticsChart() {
                 {
                     label: `Income (${monthName})`,
                     data: dailyIncome,
-                    borderColor: "#22C55E",
-                    backgroundColor: "rgba(34,197,94,0.2)",
+                    borderColor: "#10b981",
+                    backgroundColor: "rgba(16, 185, 129, 0.1)",
                     borderWidth: 3,
                     tension: 0.3,
                     fill: true
@@ -59,7 +59,7 @@ function updateAnalyticsChart() {
                 {
                     label: `Expense (${monthName})`,
                     data: dailyExpense,
-                    borderColor: "#EF4444",
+                    borderColor: "#ef4444",
                     backgroundColor: "rgba(239,68,68,0.2)",
                     borderWidth: 3,
                     tension: 0.3,
@@ -68,8 +68,8 @@ function updateAnalyticsChart() {
                 {
                     label: `Saving (${monthName})`,
                     data: dailySaving,
-                    borderColor: "#3B82F6",
-                    backgroundColor: "rgba(59,130,246,0.2)",
+                    borderColor: "#3b82f6",
+                    backgroundColor: "rgba(59, 130, 246, 0.1)",
                     borderWidth: 3,
                     tension: 0.3,
                     fill: true
